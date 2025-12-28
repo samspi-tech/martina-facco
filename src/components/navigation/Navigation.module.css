@@ -1,0 +1,212 @@
+.nav {
+    padding: 4rem;
+    position: relative;
+}
+
+.nav ul {
+    list-style: none;
+    visibility: hidden;
+    background-color: var(--background);
+
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    top: 0;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5rem;
+}
+
+.nav ul li {
+    opacity: 0;
+    transform: translateY(200rem);
+}
+
+.nav ul li a {
+    font-weight: 500;
+    font-size: 2.5rem;
+    text-decoration: none;
+    letter-spacing: -0.5px;
+    color: var(--secondary);
+    text-transform: uppercase;
+
+    &:global(.active) {
+        color: var(--primary);
+        border-bottom: 1px solid var(--primary);
+    }
+}
+
+.nav button {
+    border: none;
+    min-width: 5rem;
+    min-height: 5rem;
+    background-color: transparent;
+
+    position: absolute;
+    right: 3rem;
+    top: 1.5rem;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.openBtn {
+    & div {
+        width: 100%;
+        transition: all 0.2s linear;
+        border-bottom: 1px solid var(--secondary);
+    }
+
+    & div:last-child {
+        margin-top: 1rem;
+    }
+}
+
+.closeBtn {
+    & div {
+        width: 100%;
+        margin-bottom: -2px;
+        transition: all 0.2s linear;
+        border-bottom: 1px solid var(--secondary);
+    }
+
+    & div:first-child {
+        transform: rotate(45deg);
+    }
+
+    & div:last-child {
+        transform: rotate(-45deg);
+    }
+}
+
+.showNav {
+    visibility: visible !important;
+
+    & li {
+        animation: slide-up linear forwards;
+    }
+
+    & li:first-child {
+        animation-duration: 0.1s;
+    }
+
+    & li:nth-child(2) {
+        animation-duration: 0.2s;
+    }
+
+    & li:nth-child(3) {
+        animation-duration: 0.3s;
+    }
+
+    & li:nth-child(4) {
+        animation-duration: 0.4s;
+    }
+
+    & li:last-child {
+        animation-duration: 0.5s;
+    }
+}
+
+@keyframes slide-up {
+    0% {
+        opacity: 0;
+        transform: translateY(200rem);
+    }
+    25% {
+        opacity: 25%;
+        transform: translateY(30rem);
+    }
+    50% {
+        opacity: 25%;
+        transform: translateY(15rem);
+    }
+    75% {
+        opacity: 25%;
+        transform: translateY(1.5rem);
+    }
+    100% {
+        opacity: 100%;
+        transform: translateY(0);
+    }
+}
+
+@media (min-width: 900px) {
+    .nav {
+        padding: 2rem 4rem;
+    }
+
+    .nav button {
+        display: none;
+    }
+
+    .nav ul {
+        opacity: 100%;
+        position: relative;
+        flex-direction: row;
+        visibility: visible;
+        justify-content: flex-end;
+        background-color: transparent;
+    }
+
+    .nav ul li {
+        opacity: 100%;
+        transform: translateY(0);
+    }
+
+    .nav ul li a {
+        font-size: 1.4rem;
+        letter-spacing: 0;
+        position: relative;
+
+        &:hover {
+            &::after {
+                content: '';
+                height: 1px;
+                z-index: -999;
+                background-color: var(--secondary);
+                animation: show-border .25s linear forwards;
+
+                position: absolute;
+                bottom: -0.1rem;
+                left: 0;
+            }
+        }
+
+        &:not(:hover) {
+            &::after {
+                content: '';
+                height: 1px;
+                background-color: var(--secondary);
+                animation: hide-border .25s linear forwards;
+
+                position: absolute;
+                bottom: -0.1rem;
+                right: 0;
+            }
+        }
+    }
+}
+
+@keyframes show-border {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes hide-border {
+    from {
+        width: 100%;
+    }
+    to {
+        width: 0;
+    }
+}

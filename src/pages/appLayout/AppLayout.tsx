@@ -1,10 +1,11 @@
 import { Outlet } from 'react-router';
 import styles from './AppLayout.module.css';
+import Navigation from '@/components/navigation/Navigation.tsx';
 
 const AppLayout = () => {
     return (
         <div className={styles.appLayout}>
-            <nav>Navigation</nav>
+            <Navigation />
             <main>
                 <Outlet />
             </main>
