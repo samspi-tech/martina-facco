@@ -3,6 +3,10 @@
     position: relative;
 }
 
+.nav button:focus, .nav a:focus {
+    outline: 3px solid var(--primary);
+}
+
 .nav ul {
     list-style: none;
     visibility: hidden;
@@ -33,6 +37,10 @@
     letter-spacing: -0.5px;
     color: var(--secondary);
     text-transform: uppercase;
+
+    &:focus {
+        outline-offset: 1rem;
+    }
 
     &:global(.active) {
         color: var(--primary);

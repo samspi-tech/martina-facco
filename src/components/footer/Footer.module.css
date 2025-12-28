@@ -22,7 +22,7 @@
     }
 
     & a:focus {
-        outline-color: var(--primary);
+        outline: 3px solid var(--primary);
     }
 
     & svg {
