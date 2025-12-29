@@ -2,8 +2,8 @@
     padding: 4rem;
 }
 
-.nav button:focus,
-.nav a:focus {
+.nav button:focus-visible,
+.nav a:focus-visible {
     outline: 3px solid var(--primary);
 }
 
