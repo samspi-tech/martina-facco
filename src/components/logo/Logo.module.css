@@ -1,0 +1,9 @@
+.logo h2 {
+    line-height: 0.9;
+    font-size: 1.6rem;
+    letter-spacing: -1px;
+    text-transform: uppercase;
+
+    display: flex;
+    flex-direction: column;
+}

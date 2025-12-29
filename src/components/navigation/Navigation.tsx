@@ -2,6 +2,7 @@ import { NavLink } from 'react-router';
 import { mainNavLinks } from '@/components/navigation/dataSource.ts';
 import styles from './Navigation.module.css';
 import type { Dispatch, SetStateAction } from 'react';
+import Logo from '@/components/logo/Logo.tsx';
 
 type NavigationProps = {
     isNavVisible: boolean;
@@ -15,6 +16,7 @@ const Navigation = ({ isNavVisible, setIsNavVisible }: NavigationProps) => {
 
     return (
         <nav className={styles.nav}>
+            <Logo />
             <ul className={`${isNavVisible && styles.showNav}`}>
                 {mainNavLinks.map((link) => (
                     <li key={link.id}>
