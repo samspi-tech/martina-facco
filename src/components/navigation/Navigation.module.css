@@ -4,7 +4,7 @@
 
 .nav button:focus-visible,
 .nav a:focus-visible {
-    outline: 3px solid var(--primary);
+    outline: 3px solid var(--title);
 }
 
 .nav ul {
@@ -12,7 +12,8 @@
     position: fixed;
     list-style: none;
     visibility: hidden;
-    background-color: var(--background);
+    backdrop-filter: blur(2rem);
+    background-color: rgb(7, 6, 5, 0.8);
 
     display: flex;
     align-items: center;
@@ -27,11 +28,11 @@
 }
 
 .nav ul li a {
-    font-weight: 500;
+    font-weight: 600;
     font-size: 2.5rem;
     text-decoration: none;
     letter-spacing: -0.5px;
-    color: var(--secondary);
+    color: var(--tertiary);
     text-transform: uppercase;
 
     &:focus {
@@ -39,8 +40,8 @@
     }
 
     &:global(.active) {
-        color: var(--primary);
-        border-bottom: 1px solid var(--primary);
+        color: var(--paragraph);
+        border-bottom: 1px solid var(--paragraph);
     }
 }
 
@@ -64,7 +65,7 @@
     & div {
         width: 100%;
         transition: all 0.2s linear;
-        border-bottom: 1px solid var(--secondary);
+        border-bottom: 1px solid var(--title);
     }
 
     & div:last-child {
@@ -79,7 +80,7 @@
         width: 100%;
         margin-bottom: -2px;
         transition: all 0.2s linear;
-        border-bottom: 1px solid var(--secondary);
+        border-bottom: 1px solid var(--title);
     }
 
     & div:first-child {
@@ -159,10 +160,11 @@
     .nav ul {
         opacity: 100%;
         position: relative;
-        flex-direction: row;
         visibility: visible;
-        justify-content: flex-end;
         background-color: transparent;
+
+        flex-direction: row;
+        justify-content: space-between;
     }
 
     .nav ul li {
@@ -174,13 +176,16 @@
         font-size: 1.4rem;
         letter-spacing: 0;
         position: relative;
+        transition: color .2s linear;
 
         &:hover {
+            color: var(--paragraph);
+
             &::after {
                 content: '';
                 height: 1px;
                 z-index: -999;
-                background-color: var(--secondary);
+                background-color: var(--paragraph);
                 animation: show-border 0.25s linear forwards;
 
                 position: absolute;
@@ -193,7 +198,7 @@
             &::after {
                 content: '';
                 height: 1px;
-                background-color: var(--secondary);
+                background-color: var(--paragraph);
                 animation: hide-border 0.25s linear forwards;
 
                 position: absolute;

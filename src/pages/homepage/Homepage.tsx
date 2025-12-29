@@ -1,7 +1,13 @@
-import AboutMe from '@/components/aboutMe/AboutMe.tsx';
+import Hero from '@/components/hero/Hero.tsx';
+import styles from './Homepage.module.css';
 
 const Homepage = () => {
-    return <AboutMe />;
+    return (
+        <>
+            <div className={styles.homepageBackground}></div>
+            <Hero />
+        </>
+    );
 };
 
 export default Homepage;
