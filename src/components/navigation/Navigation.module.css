@@ -19,6 +19,7 @@
     background-color: rgb(7, 6, 5, 0.8);
 
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     flex-direction: column;
     justify-content: center;
@@ -154,7 +155,7 @@
     }
 }
 
-@media (min-width: 900px) {
+@media (min-width: 1038px) {
     .nav {
         gap: 8rem;
         padding: 2rem 4rem;
