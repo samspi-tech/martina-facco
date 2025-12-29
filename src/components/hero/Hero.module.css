@@ -3,8 +3,9 @@
     padding: 2rem;
 
     display: flex;
-    align-items: center;
-    justify-content: flex-end;
+    align-items: flex-end;
+    flex-direction: column;
+    gap: 6rem;
 }
 
 .hero h1 {
@@ -33,15 +34,21 @@
 }
 
 @media (min-width: 900px) {
+    .hero {
+        padding-right: 5rem;
+    }
+
     .hero h1 {
         font-size: 8.5rem;
-        padding-right: 5rem;
     }
 }
 
 @media (min-width: 1000px) {
+    .hero {
+        padding-right: 10rem;
+    }
+
     .hero h1 {
         font-size: 9rem;
-        padding-right: 10rem;
     }
 }
