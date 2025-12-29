@@ -5,6 +5,7 @@ import Campaigns from '@/pages/campaigns/Campaigns.tsx';
 import GraphicDesign from '@/pages/graphicDesign/GraphicDesign.tsx';
 import ContactMe from '@/pages/contactMe/ContactMe.tsx';
 import AppLayout from '@/pages/appLayout/AppLayout.tsx';
+import AboutMe from '@/pages/aboutMe/AboutMe.tsx';
 
 const App = () => {
     return (
@@ -12,6 +13,7 @@ const App = () => {
             <Routes>
                 <Route element={<AppLayout />}>
                     <Route index element={<Homepage />} />
+                    <Route path="/about-me" element={<AboutMe />} />
                     <Route path="/art-direction" element={<ArtDirection />} />
                     <Route path="/campaigns" element={<Campaigns />} />
                     <Route path="/graphic-design" element={<GraphicDesign />} />

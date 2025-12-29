@@ -1,0 +1,22 @@
+import styles from './Bio.module.css';
+
+const Bio = () => {
+    return (
+        <article className={styles.bio}>
+            <p>
+                Hi, I am Martina a{' '}
+                <b>Senior Art Director & Graphic Designer based in Italy</b>.
+                Over the years, I have developed and perfected my creative and
+                production skills for different fashion, beauty, and lifestyle
+                brands. <br /> I graduated from the{' '}
+                <b>IUAV University of Venice</b>.
+            </p>
+            <p>
+                Currently, I’m working for <b>Oakley</b> at{' '}
+                <b>EssilorLuxottica</b>.
+            </p>
+        </article>
+    );
+};
+
+export default Bio;

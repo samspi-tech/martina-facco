@@ -122,6 +122,10 @@
         animation-duration: 0.4s;
     }
 
+    & li:nth-child(5) {
+        animation-duration: 0.4s;
+    }
+
     & li:last-child {
         animation-duration: 0.5s;
     }

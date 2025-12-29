@@ -5,6 +5,11 @@ export const mainNavLinks = [
         name: 'Home',
     },
     {
+        id: 'main-nav-link-6',
+        path: '/about-me',
+        name: 'About Me',
+    },
+    {
         id: 'main-nav-link-2',
         path: '/art-direction',
         name: 'Art Direction',

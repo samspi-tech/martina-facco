@@ -1,0 +1,15 @@
+.bio {
+    height: 100%;
+    padding: 5rem 2rem 2rem;
+    margin: 0 auto;
+    max-width: 78rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.bio p {
+    font-size: 2rem;
+    line-height: 1.5;
+}
