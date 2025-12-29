@@ -20,9 +20,22 @@
     }
 }
 
-@media (min-width: 425px) {
+@media (min-width: 370px) {
+    .hero h1 {
+        font-size: 7.5rem;
+    }
+}
+
+@media (min-width: 420px) {
     .hero h1 {
         font-size: 8.5rem;
+    }
+}
+
+@media (min-width: 900px) {
+    .hero h1 {
+        font-size: 9rem;
+        padding-right: 5rem;
     }
 }
 
