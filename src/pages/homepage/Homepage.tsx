@@ -1,5 +1,7 @@
+import AboutMe from '@/components/aboutMe/AboutMe.tsx';
+
 const Homepage = () => {
-    return <div>homepage</div>;
+    return <AboutMe />;
 };
 
 export default Homepage;
