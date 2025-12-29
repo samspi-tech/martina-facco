@@ -1,5 +1,7 @@
+import ContactForm from '@/components/contactForm/ContactForm.tsx';
+
 const ContactMe = () => {
-    return <div>Contact Me</div>;
+    return <ContactForm />;
 };
 
 export default ContactMe;

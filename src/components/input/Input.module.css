@@ -1,0 +1,24 @@
+.inputContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.inputContainer textarea {
+    resize: none;
+}
+
+.inputContainer input,
+.inputContainer textarea {
+    border: none;
+    font-size: 1.6rem;
+    padding: 1.4rem 1rem;
+    color: var(--background);
+    background-color: var(--title);
+    font-family: 'Montserrat', sans-serif;
+
+    &:focus-visible {
+        outline: 2px solid var(--title);
+        outline-offset: 0.3rem;
+    }
+}
