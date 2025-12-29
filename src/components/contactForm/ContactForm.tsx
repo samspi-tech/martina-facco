@@ -7,6 +7,13 @@ import {
     type ContactMeTypes,
 } from '@/components/contactForm/contactMeSchema.ts';
 import { zodResolver } from '@hookform/resolvers/zod';
+import emailjs, { type EmailJSResponseStatus } from '@emailjs/browser';
+import {
+    EMAILJS_PUBLIC_KEY,
+    EMAILJS_SERVICE_ID,
+    EMAILJS_TEMPLATE_ID,
+} from '@/utils/constants.ts';
+import type { BaseSyntheticEvent } from 'react';
 
 const ContactForm = () => {
     const {
@@ -18,9 +25,22 @@ const ContactForm = () => {
         resolver: zodResolver(contactMeSchema),
     });
 
-    const onSubmit = (data: ContactMeTypes) => {
-        console.log(data);
-        reset();
+    const onSubmit = async (_data: ContactMeTypes, e?: BaseSyntheticEvent) => {
+        try {
+            await emailjs.sendForm(
+                EMAILJS_SERVICE_ID,
+                EMAILJS_TEMPLATE_ID,
+                e?.target as HTMLFormElement,
+                {
+                    publicKey: EMAILJS_PUBLIC_KEY,
+                }
+            );
+
+            reset();
+            console.log('success');
+        } catch (err) {
+            console.log('failed', (err as EmailJSResponseStatus).text);
+        }
     };
 
     return (
@@ -55,7 +75,9 @@ const ContactForm = () => {
                     {...register('message')}
                     error={errors.message?.message}
                 />
-                <Button type="submit">Send</Button>
+                <Button type="submit" value="Send">
+                    Send
+                </Button>
             </form>
         </div>
     );
