@@ -1,11 +1,14 @@
 import { NavLink } from 'react-router';
 import { mainNavLinks } from '@/components/navigation/dataSource.ts';
 import styles from './Navigation.module.css';
-import { useState } from 'react';
+import type { Dispatch, SetStateAction } from 'react';
 
-const Navigation = () => {
-    const [isNavVisible, setIsNavVisible] = useState(false);
+type NavigationProps = {
+    isNavVisible: boolean;
+    setIsNavVisible: Dispatch<SetStateAction<boolean>>;
+};
 
+const Navigation = ({ isNavVisible, setIsNavVisible }: NavigationProps) => {
     const handleToggleNavVisibility = () => {
         setIsNavVisible((prevState) => !prevState);
     };

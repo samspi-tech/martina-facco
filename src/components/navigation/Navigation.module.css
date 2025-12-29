@@ -1,22 +1,18 @@
 .nav {
     padding: 4rem;
-    position: relative;
 }
 
-.nav button:focus, .nav a:focus {
+.nav button:focus,
+.nav a:focus {
     outline: 3px solid var(--primary);
 }
 
 .nav ul {
+    z-index: 999;
+    position: fixed;
     list-style: none;
     visibility: hidden;
     background-color: var(--background);
-
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    top: 0;
 
     display: flex;
     align-items: center;
@@ -77,6 +73,8 @@
 }
 
 .closeBtn {
+    z-index: 999;
+
     & div {
         width: 100%;
         margin-bottom: -2px;
@@ -95,6 +93,11 @@
 
 .showNav {
     visibility: visible !important;
+
+    bottom: 0;
+    right: 0;
+    left: 0;
+    top: 0;
 
     & li {
         animation: slide-up linear forwards;
@@ -178,7 +181,7 @@
                 height: 1px;
                 z-index: -999;
                 background-color: var(--secondary);
-                animation: show-border .25s linear forwards;
+                animation: show-border 0.25s linear forwards;
 
                 position: absolute;
                 bottom: -0.1rem;
@@ -191,7 +194,7 @@
                 content: '';
                 height: 1px;
                 background-color: var(--secondary);
-                animation: hide-border .25s linear forwards;
+                animation: hide-border 0.25s linear forwards;
 
                 position: absolute;
                 bottom: -0.1rem;
