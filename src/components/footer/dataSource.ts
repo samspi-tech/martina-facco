@@ -1,14 +1,14 @@
 import {
-    FaInstagram,
+    FaInstagramSquare,
     FaLinkedin,
     FaBehanceSquare,
-    FaPinterest,
+    FaPinterestSquare,
 } from 'react-icons/fa';
 
 export const socialIcons = [
     {
         id: 'social-icon-1',
-        icon: FaInstagram,
+        icon: FaInstagramSquare,
         name: 'Instagram',
         link: 'https://www.instagram.com/martinafacco_/',
     },
@@ -26,7 +26,7 @@ export const socialIcons = [
     },
     {
         id: 'social-icon-4',
-        icon: FaPinterest,
+        icon: FaPinterestSquare,
         name: 'Pinterest',
         link: 'https://it.pinterest.com/rosemarino/',
     },
