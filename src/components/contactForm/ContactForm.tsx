@@ -70,6 +70,14 @@ const ContactForm = () => {
                     disabled={isSubmitting}
                     error={errors.email?.message}
                 />
+                <Input
+                    id="title"
+                    type="text"
+                    label="Message Title"
+                    {...register('title')}
+                    disabled={isSubmitting}
+                    error={errors.title?.message}
+                />
                 <Textarea
                     rows={5}
                     id="message"
