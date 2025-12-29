@@ -16,14 +16,11 @@ import {
 import type { BaseSyntheticEvent } from 'react';
 
 const ContactForm = () => {
-    const {
-        register,
-        formState: { errors },
-        reset,
-        handleSubmit,
-    } = useForm<ContactMeTypes>({
-        resolver: zodResolver(contactMeSchema),
-    });
+    const { register, formState, reset, handleSubmit } =
+        useForm<ContactMeTypes>({
+            resolver: zodResolver(contactMeSchema),
+        });
+    const { errors, isSubmitting } = formState;
 
     const onSubmit = async (_data: ContactMeTypes, e?: BaseSyntheticEvent) => {
         try {
@@ -51,6 +48,7 @@ const ContactForm = () => {
                     type="text"
                     id="firstName"
                     label="First Name"
+                    disabled={isSubmitting}
                     {...register('firstName')}
                     error={errors.firstName?.message}
                 />
@@ -58,6 +56,7 @@ const ContactForm = () => {
                     type="text"
                     id="lastName"
                     label="Last Name"
+                    disabled={isSubmitting}
                     {...register('lastName')}
                     error={errors.lastName?.message}
                 />
@@ -66,16 +65,18 @@ const ContactForm = () => {
                     id="email"
                     label="Email"
                     {...register('email')}
+                    disabled={isSubmitting}
                     error={errors.email?.message}
                 />
                 <Input
-                    type="textarea"
                     id="message"
+                    type="textarea"
                     label="Message"
+                    disabled={isSubmitting}
                     {...register('message')}
                     error={errors.message?.message}
                 />
-                <Button type="submit" value="Send">
+                <Button type="submit" value="Send" disabled={isSubmitting}>
                     Send
                 </Button>
             </form>
