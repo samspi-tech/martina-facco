@@ -34,7 +34,6 @@
     font-weight: 600;
     font-size: 2.5rem;
     text-decoration: none;
-    letter-spacing: -0.5px;
     color: var(--tertiary);
     text-transform: uppercase;
 
@@ -153,8 +152,8 @@
 
 @media (min-width: 900px) {
     .nav {
-        padding: 2rem 4rem;
         gap: 8rem;
+        padding: 2rem 4rem;
     }
 
     .nav button {
@@ -179,7 +178,6 @@
 
     .nav ul li a {
         font-size: 1.4rem;
-        letter-spacing: 0;
         position: relative;
         transition: color .2s linear;
 
