@@ -1,13 +1,14 @@
 import styles from './Logo.module.css';
+import { Link } from 'react-router';
 
 const Logo = () => {
     return (
-        <div className={styles.logo}>
+        <Link to="/" className={styles.logo}>
             <h2>
                 <span>Martina</span>
                 <span>Facco</span>
             </h2>
-        </div>
+        </Link>
     );
 };
 
