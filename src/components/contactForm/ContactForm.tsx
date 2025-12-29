@@ -13,30 +13,31 @@ import {
     EMAILJS_SERVICE_ID,
     EMAILJS_TEMPLATE_ID,
 } from '@/utils/constants.ts';
-import type { BaseSyntheticEvent } from 'react';
+import Textarea from '@/components/textarea/Textarea.tsx';
+import { useState } from 'react';
 
 const ContactForm = () => {
+    const [isSubmitting, setIsSubmitting] = useState(false);
+
     const { register, formState, reset, handleSubmit } =
         useForm<ContactMeTypes>({
             resolver: zodResolver(contactMeSchema),
         });
-    const { errors, isSubmitting } = formState;
+    const { errors } = formState;
 
-    const onSubmit = async (_data: ContactMeTypes, e?: BaseSyntheticEvent) => {
+    const onSubmit = async (data: ContactMeTypes) => {
+        setIsSubmitting(true);
         try {
-            await emailjs.sendForm(
-                EMAILJS_SERVICE_ID,
-                EMAILJS_TEMPLATE_ID,
-                e?.target as HTMLFormElement,
-                {
-                    publicKey: EMAILJS_PUBLIC_KEY,
-                }
-            );
+            await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, data, {
+                publicKey: EMAILJS_PUBLIC_KEY,
+            });
 
-            reset();
             console.log('success');
         } catch (err) {
             console.log('failed', (err as EmailJSResponseStatus).text);
+        } finally {
+            reset();
+            setIsSubmitting(false);
         }
     };
 
@@ -61,16 +62,17 @@ const ContactForm = () => {
                     error={errors.lastName?.message}
                 />
                 <Input
-                    type="email"
                     id="email"
+                    type="email"
                     label="Email"
+                    autoComplete="email"
                     {...register('email')}
                     disabled={isSubmitting}
                     error={errors.email?.message}
                 />
-                <Input
+                <Textarea
+                    rows={5}
                     id="message"
-                    type="textarea"
                     label="Message"
                     disabled={isSubmitting}
                     {...register('message')}
