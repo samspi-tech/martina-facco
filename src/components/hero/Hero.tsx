@@ -12,7 +12,7 @@ const Hero = () => {
     return (
         <header className={styles.hero}>
             <h1>
-                Senior Art Director <span>&amp;</span> Graphic Designer
+                Senior Art Director <i>&amp;</i> Graphic Designer
             </h1>
             <Button onClick={handleNavigateToAboutMe}>About me</Button>
         </header>
