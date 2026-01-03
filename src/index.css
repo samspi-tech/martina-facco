@@ -32,3 +32,11 @@ h5,
 h6 {
     color: var(--title);
 }
+
+li {
+    list-style: none;
+}
+
+a {
+    display: inline-block;
+}

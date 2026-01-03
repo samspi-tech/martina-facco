@@ -13,7 +13,6 @@
 .nav ul {
     z-index: 999;
     position: fixed;
-    list-style: none;
     visibility: hidden;
     backdrop-filter: blur(2rem);
     background-color: rgb(7, 6, 5, 0.8);

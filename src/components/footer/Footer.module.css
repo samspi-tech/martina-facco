@@ -1,6 +1,6 @@
 .footer {
-    padding: 2rem 2rem 1rem;
     font-size: 1.4rem;
+    padding: 2rem 2rem 1rem;
 
     display: flex;
     flex-direction: column;
@@ -8,37 +8,40 @@
     gap: 1rem;
 }
 
-.footer, a {
+.footer,
+a {
     color: var(--tertiary);
 }
 
-.iconsContainer {
+.footer ul {
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
 
-    & a {
-        padding: 1rem;
-        transition: color .2s linear;
-    }
 
-    & a:hover {
+
+.footer a {
+    padding: 1rem;
+    transition: color 0.2s linear;
+
+    &:hover {
         color: var(--paragraph);
     }
 
-    & a:focus-visible {
+    &:focus-visible {
         outline: 3px solid var(--title);
-    }
-
-    & svg {
-        width: 2.5rem;
-        height: 2.5rem;
-        vertical-align: middle;
     }
 }
 
+.footer svg {
+    width: 2.5rem;
+    height: 2.5rem;
+    vertical-align: middle;
+}
+
 @media (min-width: 425px) {
-    .iconsContainer {
+    .footer ul {
         padding: 0 2rem;
     }
 }
@@ -49,10 +52,9 @@
         align-items: center;
     }
 
-    .iconsContainer {
+    .footer ul {
         order: 2;
         gap: 1rem;
         justify-content: flex-end;
     }
 }
-
