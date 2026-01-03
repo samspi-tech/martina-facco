@@ -17,7 +17,9 @@ const Navigation = ({ isNavVisible, setIsNavVisible }: NavigationProps) => {
     return (
         <nav className={styles.nav}>
             <Logo />
-            <ul className={`${isNavVisible && styles.showNav}`}>
+            <ul
+                className={`${styles.navList} ${isNavVisible && styles.showNav}`}
+            >
                 {mainNavLinks.map((link) => (
                     <li key={link.id}>
                         <NavLink

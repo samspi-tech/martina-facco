@@ -1,38 +1,58 @@
 .nav {
-    padding: 2.5rem 1.5rem;
+    padding: 2rem 3rem;
 
     display: flex;
     justify-content: space-between;
 
-    @media (min-width: 1038px) {
-        gap: 8rem;
-        padding: 2rem 4rem;
+    & button:focus-visible,
+    & a:focus-visible {
+        outline: 3px solid var(--title);
     }
 
-    & ul {
-        z-index: 999;
-        position: fixed;
-        visibility: hidden;
-        backdrop-filter: blur(2rem);
-        background-color: rgb(7, 6, 5, 0.8);
+    & button {
+        border: none;
+        min-width: 5rem;
+        min-height: 5rem;
+        background-color: transparent;
+
+        position: absolute;
+        right: 3rem;
+        top: 1.5rem;
 
         display: flex;
-        flex-wrap: wrap;
         align-items: center;
         flex-direction: column;
         justify-content: center;
-        gap: 5rem;
 
         @media (min-width: 1038px) {
-            opacity: 100%;
-            position: relative;
-            visibility: visible;
-            backdrop-filter: none;
-            background-color: transparent;
-
-            flex-direction: row;
-            justify-content: space-between;
+            display: none;
         }
+    }
+}
+
+.navList {
+    z-index: 999;
+    position: fixed;
+    visibility: hidden;
+    backdrop-filter: blur(2rem);
+    background-color: rgb(7, 6, 5, 0.8);
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+
+    @media (min-width: 1038px) {
+        opacity: 100%;
+        position: relative;
+        visibility: visible;
+        backdrop-filter: none;
+        background-color: transparent;
+
+        flex-direction: row;
+        justify-content: space-between;
     }
 
     & li {
@@ -43,11 +63,6 @@
             opacity: 100%;
             transform: translateY(0);
         }
-    }
-
-    & button:focus-visible,
-    & a:focus-visible {
-        outline: 3px solid var(--title);
     }
 
     & a {
@@ -99,26 +114,6 @@
                     right: 0;
                 }
             }
-        }
-    }
-
-    & button {
-        border: none;
-        min-width: 5rem;
-        min-height: 5rem;
-        background-color: transparent;
-
-        position: absolute;
-        right: 3rem;
-        top: 1.5rem;
-
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        justify-content: center;
-
-        @media (min-width: 1038px) {
-            display: none;
         }
     }
 }

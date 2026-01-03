@@ -4,7 +4,7 @@
     font-size: 2rem;
     max-width: 78rem;
     line-height: 1.5;
-    padding: 5rem 2rem 2rem;
+    text-wrap: balance;
 
     display: flex;
     flex-direction: column;

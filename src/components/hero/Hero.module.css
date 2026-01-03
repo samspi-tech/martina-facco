@@ -1,39 +1,33 @@
 .hero {
     height: 100%;
-    padding: 2rem;
+    margin: 0 auto;
+    max-width: 800px;
 
     display: flex;
     align-items: flex-end;
     flex-direction: column;
     gap: 6rem;
 
-    @media (min-width: 900px) {
-        padding-right: 5rem;
-    }
-
-    @media (min-width: 1000px) {
-        padding-right: 10rem;
-    }
-
     & h1 {
+        line-height: 1;
         max-width: 568px;
-        line-height: 1.1;
-        font-size: 5.5rem;
+        font-weight: 800;
+        font-size: 5.4rem;
         text-align: right;
         text-wrap: balance;
         letter-spacing: -3.5px;
         text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
 
         & i {
-            font-weight: 100;
+            font-weight: 400;
         }
 
         @media (min-width: 375px) {
-            font-size: 7rem;
+            font-size: 6.4rem;
         }
 
         @media (min-width: 420px) {
-            font-size: 7.5rem;
+            font-size: 7.4rem;
         }
 
         @media (min-width: 900px) {

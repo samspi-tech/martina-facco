@@ -1,20 +1,21 @@
 .footer {
     font-size: 1.4rem;
-    padding: 2rem 2rem 1rem;
+    padding: 2rem 3rem 1rem;
 
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap: 1rem;
+    gap: 1.3rem;
 
     &,
     & a {
         color: var(--tertiary);
     }
 
-    @media (min-width: 580px) {
+    @media (min-width: 520px) {
         flex-direction: row;
         align-items: center;
+        padding: 2rem 2rem 1rem 3rem;
     }
 
     & ul {
@@ -22,11 +23,7 @@
         align-items: center;
         justify-content: space-between;
 
-        @media (min-width: 425px) {
-            padding: 0 2rem;
-        }
-
-        @media (min-width: 580px) {
+        @media (min-width: 520px) {
             order: 2;
             gap: 1rem;
             justify-content: flex-end;
@@ -47,8 +44,8 @@
     }
 
     & svg {
-        width: 2.5rem;
-        height: 2.5rem;
+        width: 2.7rem;
+        height: 2.7rem;
         vertical-align: middle;
     }
 }
