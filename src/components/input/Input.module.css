@@ -12,13 +12,13 @@
         border: none;
         font-size: 1.6rem;
         padding: 1.4rem 1rem;
-        color: var(--background);
-        background-color: var(--title);
+        color: var(--black);
+        background-color: var(--white);
         font-family: 'Montserrat', sans-serif;
 
         &:focus-visible {
             outline-offset: 0.3rem;
-            outline: 2px solid var(--title);
+            outline: 2px solid var(--white);
         }
 
         &:disabled {

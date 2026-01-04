@@ -6,7 +6,7 @@
 
     & button:focus-visible,
     & a:focus-visible {
-        outline: 3px solid var(--title);
+        outline: 3px solid var(--white);
     }
 
     & button {
@@ -69,7 +69,7 @@
         font-weight: 600;
         font-size: 2.5rem;
         text-decoration: none;
-        color: var(--tertiary);
+        color: var(--secondary);
         text-transform: uppercase;
 
         &:focus-visible {
@@ -78,8 +78,8 @@
 
         &:global(.active) {
             margin-bottom: -1px;
-            color: var(--paragraph);
-            border-bottom: 1px solid var(--paragraph);
+            color: var(--main);
+            border-bottom: 1px solid var(--main);
         }
 
         @media (min-width: 1038px) {
@@ -88,13 +88,13 @@
             transition: color 0.2s linear;
 
             &:hover {
-                color: var(--paragraph);
+                color: var(--main);
 
                 &::after {
                     content: '';
                     height: 1px;
                     z-index: -999;
-                    background-color: var(--paragraph);
+                    background-color: var(--main);
                     animation: show-underline 0.25s linear forwards;
 
                     position: absolute;
@@ -107,7 +107,7 @@
                 &::after {
                     content: '';
                     height: 1px;
-                    background-color: var(--paragraph);
+                    background-color: var(--main);
                     animation: hide-underline 0.25s linear forwards;
 
                     position: absolute;
@@ -123,7 +123,7 @@
     & div {
         width: 100%;
         transition: all 0.2s linear;
-        border-bottom: 1px solid var(--title);
+        border-bottom: 1px solid var(--white);
     }
 
     & div:last-child {
@@ -138,7 +138,7 @@
         width: 100%;
         margin-bottom: -2px;
         transition: all 0.2s linear;
-        border-bottom: 1px solid var(--title);
+        border-bottom: 1px solid var(--white);
     }
 
     & div:first-child {

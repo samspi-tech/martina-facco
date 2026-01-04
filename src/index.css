@@ -7,10 +7,10 @@
 }
 
 :root {
-    --background: rgb(7, 6, 5);
-    --title: oklch(93.6% 0.032 17.717);
-    --paragraph: oklch(70.4% 0.191 22.216);
-    --tertiary: oklch(86.9% 0.005 56.366);
+    --black: rgb(7, 6, 5);
+    --white: oklch(93.6% 0.032 17.717);
+    --main: oklch(70.4% 0.191 22.216);
+    --secondary: oklch(86.9% 0.005 56.366);
 }
 
 html {
@@ -19,8 +19,8 @@ html {
 
 body {
     font-size: 1.6rem;
-    color: var(--paragraph);
-    background-color: var(--background);
+    color: var(--main);
+    background-color: var(--black);
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -30,7 +30,7 @@ h3,
 h4,
 h5,
 h6 {
-    color: var(--title);
+    color: var(--white);
 }
 
 li {

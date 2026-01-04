@@ -9,7 +9,7 @@
 
     &,
     & a {
-        color: var(--tertiary);
+        color: var(--secondary);
     }
 
     @media (min-width: 520px) {
@@ -35,11 +35,11 @@
         transition: color 0.2s linear;
 
         &:hover {
-            color: var(--paragraph);
+            color: var(--main);
         }
 
         &:focus-visible {
-            outline: 3px solid var(--title);
+            outline: 3px solid var(--white);
         }
     }
 

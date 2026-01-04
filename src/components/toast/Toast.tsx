@@ -5,20 +5,20 @@ const Toast = () => {
         duration: 5000,
         success: {
             style: {
-                background: 'var(--title)',
+                background: 'var(--white)',
             },
             iconTheme: {
-                primary: 'var(--background)',
-                secondary: 'var(--title)',
+                primary: 'var(--black)',
+                secondary: 'var(--white)',
             },
         },
         error: {
             style: {
-                background: 'var(--paragraph)',
+                background: 'var(--main)',
             },
             iconTheme: {
-                primary: 'var(--background)',
-                secondary: 'var(--paragraph)',
+                primary: 'var(--black)',
+                secondary: 'var(--main)',
             },
         },
         style: {
@@ -26,7 +26,7 @@ const Toast = () => {
             lineHeight: '1.5',
             borderRadius: '0',
             padding: '16px 24px',
-            color: 'var(--background)',
+            color: 'var(--black)',
             boxShadow: '0 5px 10px rgba(0, 0, 0, 0.7)',
         },
     };

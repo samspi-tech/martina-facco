@@ -3,6 +3,6 @@
     font-weight: 700;
     width: fit-content;
     margin-top: 0.2rem;
-    color: var(--background);
-    background-color: var(--paragraph);
+    color: var(--black);
+    background-color: var(--main);
 }
