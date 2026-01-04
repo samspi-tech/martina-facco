@@ -7,6 +7,7 @@ import {
     EMAILJS_TEMPLATE_ID,
 } from '@/utils/constants.ts';
 import ReCAPTCHA from 'react-google-recaptcha';
+import toast from 'react-hot-toast';
 
 export const useEmailJs = (reset: () => void) => {
     const recaptchaRef = useRef<ReCAPTCHA | null>(null);
@@ -14,7 +15,7 @@ export const useEmailJs = (reset: () => void) => {
 
     const sendEmail = async (data: ContactMeTypes) => {
         const captchaValue = recaptchaRef.current?.getValue();
-        if (!captchaValue) return alert('Please verify the reCAPTCHA.');
+        if (!captchaValue) return toast.error('Please verify the reCAPTCHA.');
 
         const templateParams = {
             ...data,
@@ -31,9 +32,19 @@ export const useEmailJs = (reset: () => void) => {
             );
 
             reset();
-            console.log('success');
+            toast.success(
+                'Message sent successfully.\nPlease, check your email.'
+            );
         } catch (err) {
-            console.log('failed', (err as EmailJSResponseStatus).text);
+            toast.error('Something went wrong.\nTry again later, please.');
+
+            const emailJsErrorMessage = (err as EmailJSResponseStatus).text;
+
+            if (!emailJsErrorMessage && err instanceof Error) {
+                console.error(err.message);
+            } else {
+                console.error(emailJsErrorMessage);
+            }
         } finally {
             setIsSubmitting(false);
         }
