@@ -1,50 +1,31 @@
+import { useForm } from 'react-hook-form';
+import { zodResolver } from '@hookform/resolvers/zod';
+import ReCAPTCHA from 'react-google-recaptcha';
+
 import styles from './ContactForm.module.css';
 import Input from '@/components/input/Input.tsx';
 import Button from '@/components/button/Button.tsx';
-import { useForm } from 'react-hook-form';
 import {
     contactMeSchema,
     type ContactMeTypes,
 } from '@/components/contactForm/contactMeSchema.ts';
-import { zodResolver } from '@hookform/resolvers/zod';
-import emailjs, { type EmailJSResponseStatus } from '@emailjs/browser';
-import {
-    EMAILJS_PUBLIC_KEY,
-    EMAILJS_SERVICE_ID,
-    EMAILJS_TEMPLATE_ID,
-} from '@/utils/constants.ts';
+import { SITE_KEY } from '@/utils/constants.ts';
 import Textarea from '@/components/textarea/Textarea.tsx';
-import { useState } from 'react';
+import { useEmailJs } from '@/hooks/useEmailJs.ts';
 
 const ContactForm = () => {
-    const [isSubmitting, setIsSubmitting] = useState(false);
-
     const { register, formState, reset, handleSubmit } =
         useForm<ContactMeTypes>({
             resolver: zodResolver(contactMeSchema),
         });
     const { errors } = formState;
 
-    const onSubmit = async (data: ContactMeTypes) => {
-        setIsSubmitting(true);
-        try {
-            await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, data, {
-                publicKey: EMAILJS_PUBLIC_KEY,
-            });
-
-            console.log('success');
-        } catch (err) {
-            console.log('failed', (err as EmailJSResponseStatus).text);
-        } finally {
-            reset();
-            setIsSubmitting(false);
-        }
-    };
+    const { isSubmitting, sendEmail, recaptchaRef } = useEmailJs(reset);
 
     return (
         <div className={styles.formContainer}>
             <h2>Let's get in touch!</h2>
-            <form onSubmit={handleSubmit(onSubmit)}>
+            <form onSubmit={handleSubmit(sendEmail)}>
                 <Input
                     type="text"
                     id="firstName"
@@ -86,9 +67,16 @@ const ContactForm = () => {
                     {...register('message')}
                     error={errors.message?.message}
                 />
-                <Button type="submit" value="Send" disabled={isSubmitting}>
-                    Send
-                </Button>
+                <footer>
+                    <ReCAPTCHA
+                        theme="dark"
+                        ref={recaptchaRef}
+                        sitekey={SITE_KEY}
+                    />
+                    <Button type="submit" value="Send" disabled={isSubmitting}>
+                        Send
+                    </Button>
+                </footer>
             </form>
         </div>
     );
