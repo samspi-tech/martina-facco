@@ -12,13 +12,8 @@ const Footer = () => {
                     const Icon = icon;
 
                     return (
-                        <li>
-                            <a
-                                key={id}
-                                href={link}
-                                target="_blank"
-                                aria-label={name}
-                            >
+                        <li key={id}>
+                            <a href={link} target="_blank" aria-label={name}>
                                 <Icon />
                             </a>
                         </li>
