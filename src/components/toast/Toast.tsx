@@ -2,10 +2,9 @@ import { Toaster } from 'react-hot-toast';
 
 const Toast = () => {
     const options = {
+        duration: 5000,
         success: {
-            duration: 5000,
             style: {
-                color: 'var(--background)',
                 background: 'var(--title)',
             },
             iconTheme: {
@@ -14,9 +13,7 @@ const Toast = () => {
             },
         },
         error: {
-            duration: 5000,
             style: {
-                color: 'var(--background)',
                 background: 'var(--paragraph)',
             },
             iconTheme: {
@@ -29,6 +26,7 @@ const Toast = () => {
             lineHeight: '1.5',
             borderRadius: '0',
             padding: '16px 24px',
+            color: 'var(--background)',
             boxShadow: '0 5px 10px rgba(0, 0, 0, 0.7)',
         },
     };
