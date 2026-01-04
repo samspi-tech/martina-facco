@@ -77,6 +77,7 @@
         }
 
         &:global(.active) {
+            margin-bottom: -1px;
             color: var(--paragraph);
             border-bottom: 1px solid var(--paragraph);
         }
