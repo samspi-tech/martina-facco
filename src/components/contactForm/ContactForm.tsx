@@ -12,6 +12,7 @@ import {
 import { SITE_KEY } from '@/utils/constants.ts';
 import Textarea from '@/components/textarea/Textarea.tsx';
 import { useEmailJs } from '@/hooks/useEmailJs.ts';
+import MiniSpinner from '@/components/miniSpinner/MiniSpinner.tsx';
 
 const ContactForm = () => {
     const { register, formState, reset, handleSubmit } =
@@ -74,7 +75,7 @@ const ContactForm = () => {
                         sitekey={SITE_KEY}
                     />
                     <Button type="submit" value="Send" disabled={isSubmitting}>
-                        Send
+                        {isSubmitting ? <MiniSpinner /> : 'Send'}
                     </Button>
                 </footer>
             </form>

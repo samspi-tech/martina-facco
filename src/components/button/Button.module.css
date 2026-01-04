@@ -3,12 +3,18 @@
     cursor: pointer;
     font-weight: 800;
     font-size: 1.5rem;
-    padding: 1.8rem 3.6rem;
-    letter-spacing: 0.1rem;
+    min-height: 5.5rem;
+    min-width: 12.1rem;
     color: var(--black);
+    padding: 1.2rem 3.6rem;
+    letter-spacing: 0.1rem;
     text-transform: uppercase;
     background-color: var(--white);
     font-family: 'Montserrat', sans-serif;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     &:disabled {
         background-color: #808080;
