@@ -6,6 +6,7 @@ import GraphicDesign from '@/pages/graphicDesign/GraphicDesign.tsx';
 import ContactMe from '@/pages/contactMe/ContactMe.tsx';
 import AppLayout from '@/pages/appLayout/AppLayout.tsx';
 import AboutMe from '@/pages/aboutMe/AboutMe.tsx';
+import PageNotFound from '@/pages/pageNotFound/PageNotFound.tsx';
 
 const App = () => {
     return (
@@ -19,6 +20,7 @@ const App = () => {
                     <Route path="/graphic-design" element={<GraphicDesign />} />
                     <Route path="/contact-me" element={<ContactMe />} />
                 </Route>
+                <Route path="*" element={<PageNotFound />} />
             </Routes>
         </Router>
     );
