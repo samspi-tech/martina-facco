@@ -17,8 +17,8 @@
         font-family: 'Montserrat', sans-serif;
 
         &:focus-visible {
-            outline-offset: 0.3rem;
-            outline: 2px solid var(--white);
+            outline-offset: 0.4rem;
+            outline: 3px solid var(--white);
         }
 
         &:disabled {

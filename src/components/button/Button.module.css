@@ -19,4 +19,9 @@
     &:disabled {
         background-color: #808080;
     }
+
+    &:focus-visible {
+        outline-offset: 0.4rem;
+        outline: 3px solid var(--white);
+    }
 }

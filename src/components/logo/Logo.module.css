@@ -9,4 +9,8 @@
 
     display: flex;
     flex-direction: column;
+
+    &:focus-visible {
+        outline-offset: 0.4rem;
+    }
 }

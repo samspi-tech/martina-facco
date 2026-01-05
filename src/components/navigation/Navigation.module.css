@@ -6,6 +6,7 @@
 
     & button:focus-visible,
     & a:focus-visible {
+        outline-offset: 0.4rem;
         outline: 3px solid var(--white);
     }
 
@@ -71,10 +72,6 @@
         text-decoration: none;
         color: var(--secondary);
         text-transform: uppercase;
-
-        &:focus-visible {
-            outline-offset: 0.5rem;
-        }
 
         &:global(.active) {
             margin-bottom: -1px;
