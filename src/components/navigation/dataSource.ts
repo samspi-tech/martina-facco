@@ -6,12 +6,12 @@ export const mainNavLinks = [
     },
     {
         id: 'main-nav-link-6',
-        path: '/about-me',
+        path: '/aboutMe',
         name: 'About Me',
     },
     {
         id: 'main-nav-link-2',
-        path: '/art-direction',
+        path: '/artDirection',
         name: 'Art Direction',
     },
     {
@@ -21,12 +21,12 @@ export const mainNavLinks = [
     },
     {
         id: 'main-nav-link-4',
-        path: '/graphic-design',
+        path: '/graphicDesign',
         name: 'Graphic Design',
     },
     {
         id: 'main-nav-link-5',
-        path: '/contact-me',
+        path: '/contactMe',
         name: 'Contact Me',
     },
 ];

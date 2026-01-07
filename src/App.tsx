@@ -14,11 +14,11 @@ const App = () => {
             <Routes>
                 <Route element={<AppLayout />}>
                     <Route index element={<Homepage />} />
-                    <Route path="/about-me" element={<AboutMe />} />
-                    <Route path="/art-direction" element={<ArtDirection />} />
+                    <Route path="/aboutMe" element={<AboutMe />} />
+                    <Route path="/artDirection" element={<ArtDirection />} />
                     <Route path="/campaigns" element={<Campaigns />} />
-                    <Route path="/graphic-design" element={<GraphicDesign />} />
-                    <Route path="/contact-me" element={<ContactMe />} />
+                    <Route path="/graphicDesign" element={<GraphicDesign />} />
+                    <Route path="/contactMe" element={<ContactMe />} />
                 </Route>
                 <Route path="*" element={<PageNotFound />} />
             </Routes>
