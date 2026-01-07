@@ -1,0 +1,510 @@
+{
+    "artDirection": [
+        {
+            "id": "oakley",
+            "title": "APAC Catalog",
+            "projectScope": ["Art Direction"],
+            "year": "2022",
+            "galleryName": "Oakley",
+            "images": [
+                { "id": "oakley-02", "fileName": "oakley.jpg" },
+                { "id": "oakley-03", "fileName": "oakley-2.jpg" },
+                { "id": "oakley-04", "fileName": "oakley-3.jpg" },
+                { "id": "oakley-05", "fileName": "oakley-4.jpg" },
+                { "id": "oakley-06", "fileName": "oakley-5.jpg" },
+                { "id": "oakley-07", "fileName": "oakley-6.jpg" },
+                { "id": "oakley-08", "fileName": "oakley-7.jpg" },
+                { "id": "oakley-09", "fileName": "oakley-8.jpg" },
+                { "id": "oakley-10", "fileName": "oakley-9.jpg" },
+                { "id": "oakley-11", "fileName": "oakley-10.jpg" },
+                { "id": "oakley-12", "fileName": "oakley-11.jpg" },
+                { "id": "oakley-13", "fileName": "oakley-12.jpg" },
+                { "id": "oakley-14", "fileName": "oakley-13.jpg" },
+                { "id": "oakley-15", "fileName": "oakley-14.jpg" },
+                { "id": "oakley-01", "fileName": "oakley-15.jpg" }
+            ]
+        },
+        {
+            "id": "cpCompany",
+            "title": "Loyalty Program",
+            "projectScope": ["Concept and mood board"],
+            "agency": "Isobar",
+            "year": "2022",
+            "galleryName": "C.P. Company",
+            "images": [
+                { "id": "cp-company", "fileName": "cp-company.jpg" },
+                { "id": "cp-company-2", "fileName": "cp-company-2.jpg" },
+                { "id": "cp-company-3", "fileName": "cp-company-3.jpg" },
+                { "id": "cp-company-4", "fileName": "cp-company-4.jpg" },
+                { "id": "cp-company-5", "fileName": "cp-company-5.jpg" },
+                { "id": "cp-company-6", "fileName": "cp-company-6.jpg" },
+                { "id": "cp-company-7", "fileName": "cp-company-7.jpg" },
+                { "id": "cp-company-8", "fileName": "cp-company-8.jpg" },
+                { "id": "cp-company-9", "fileName": "cp-company-9.jpg" }
+            ]
+        },
+        {
+            "id": "officinaSmn",
+            "title": "Social contents",
+            "projectScope": ["Concept and mood board", "Creative direction"],
+            "isFreelance": true,
+            "year": "2022",
+            "galleryName": "Officina S.M.N.",
+            "images": [
+                { "id": "officina-smn", "fileName": "officina-smn.jpg" },
+                { "id": "officina-smn-2", "fileName": "officina-smn-2.jpg" },
+                { "id": "officina-smn-3", "fileName": "officina-smn-3.jpg" },
+                { "id": "officina-smn-4", "fileName": "officina-smn-4.jpg" },
+                { "id": "officina-smn-5", "fileName": "officina-smn-5.jpg" },
+                { "id": "officina-smn-6", "fileName": "officina-smn-6.jpg" },
+                { "id": "officina-smn-7", "fileName": "officina-smn-7.jpg" },
+                { "id": "officina-smn-8", "fileName": "officina-smn-8.jpg" },
+                { "id": "officina-smn-9", "fileName": "officina-smn-9.jpg" },
+                { "id": "officina-smn-10", "fileName": "officina-smn-10.jpg" },
+                { "id": "officina-smn-11", "fileName": "officina-smn-11.jpg" },
+                { "id": "officina-smn-12", "fileName": "officina-smn-12.jpg" },
+                { "id": "officina-smn-13", "fileName": "officina-smn-13.jpg" },
+                { "id": "officina-smn-14", "fileName": "officina-smn-14.jpg" },
+                { "id": "officina-smn-15", "fileName": "officina-smn-15.jpg" }
+            ]
+        },
+        {
+            "id": "fluidEchoes",
+            "title": "Fashion Editorial",
+            "isPersonalProject": true,
+            "year": "2021",
+            "galleryName": "Fluid Echoes",
+            "images": [
+                { "id": "fluid-echoes", "fileName": "fluid-echoes.jpg" },
+                { "id": "fluid-echoes-2", "fileName": "fluid-echoes-2.jpg" },
+                { "id": "fluid-echoes-3", "fileName": "fluid-echoes-3.jpg" },
+                { "id": "fluid-echoes-4", "fileName": "fluid-echoes-4.jpg" },
+                { "id": "fluid-echoes-5", "fileName": "fluid-echoes-5.jpg" },
+                { "id": "fluid-echoes-6", "fileName": "fluid-echoes-6.jpg" }
+            ]
+        },
+        {
+            "id": "blackRoom",
+            "title": "Fashion Editorial",
+            "isPersonalProject": true,
+            "year": "2021",
+            "galleryName": "Black Room",
+            "images": [
+                { "id": "black-room", "fileName": "black-room.jpg" },
+                { "id": "black-room-2", "fileName": "black-room-2.jpg" },
+                { "id": "black-room-3", "fileName": "black-room-3.jpg" },
+                { "id": "black-room-4", "fileName": "black-room-4.jpg" },
+                { "id": "black-room-5", "fileName": "black-room-5.jpg" },
+                { "id": "black-room-6", "fileName": "black-room-6.jpg" }
+            ]
+        },
+        {
+            "id": "conbipel",
+            "title": "Social Contents",
+            "projectScope": [
+                "Concept and mood board",
+                "Casting direction",
+                "Production supervision",
+                "Post-production supervision"
+            ],
+            "agency": "Low",
+            "year": "2018-2021",
+            "galleryName": "Conbipel",
+            "images": [
+                { "id": "conbipel", "fileName": "conbipel.jpg" },
+                { "id": "conbipel-2", "fileName": "conbipel-2.jpg" },
+                { "id": "conbipel-3", "fileName": "conbipel-3.jpg" },
+                { "id": "conbipel-4", "fileName": "conbipel-4.jpg" },
+                { "id": "conbipel-5", "fileName": "conbipel-5.jpg" },
+                { "id": "conbipel-6", "fileName": "conbipel-6.jpg" },
+                { "id": "conbipel-7", "fileName": "conbipel-7.jpg" },
+                { "id": "conbipel-8", "fileName": "conbipel-8.jpg" },
+                { "id": "conbipel-9", "fileName": "conbipel-9.jpg" },
+                { "id": "conbipel-10", "fileName": "conbipel-10.jpg" },
+                { "id": "conbipel-11", "fileName": "conbipel-11.jpg" },
+                { "id": "conbipel-12", "fileName": "conbipel-12.jpg" },
+                { "id": "conbipel-13", "fileName": "conbipel-13.jpg" },
+                { "id": "conbipel-14", "fileName": "conbipel-14.jpg" },
+                { "id": "conbipel-15", "fileName": "conbipel-15.jpg" }
+            ]
+        },
+        {
+            "id": "colmarOriginals",
+            "title": "Editorial",
+            "projectScope": [
+                "Creative supervision",
+                "Production supervision",
+                "Post-production supervision"
+            ],
+            "agency": "Low",
+            "year": "2020",
+            "galleryName": "Colmar Originals",
+            "images": [
+                {
+                    "id": "colmar-originals",
+                    "fileName": "colmar-originals.jpg"
+                },
+                {
+                    "id": "colmar-originals-2",
+                    "fileName": "colmar-originals-2.jpg"
+                },
+                {
+                    "id": "colmar-originals-3",
+                    "fileName": "colmar-originals-3.jpg"
+                },
+                {
+                    "id": "colmar-originals-4",
+                    "fileName": "colmar-originals-4.jpg"
+                },
+                {
+                    "id": "colmar-originals-5",
+                    "fileName": "colmar-originals-5.jpg"
+                },
+                {
+                    "id": "colmar-originals-6",
+                    "fileName": "colmar-originals-6.jpg"
+                },
+                {
+                    "id": "colmar-originals-7",
+                    "fileName": "colmar-originals-7.jpg"
+                },
+                {
+                    "id": "colmar-originals-8",
+                    "fileName": "colmar-originals-8.jpg"
+                },
+                {
+                    "id": "colmar-originals-9",
+                    "fileName": "colmar-originals-9.jpg"
+                },
+                {
+                    "id": "colmar-originals-10",
+                    "fileName": "colmar-originals-10.jpg"
+                },
+                {
+                    "id": "colmar-originals-11",
+                    "fileName": "colmar-originals-11.jpg"
+                },
+                {
+                    "id": "colmar-originals-12",
+                    "fileName": "colmar-originals-12.jpg"
+                }
+            ]
+        },
+        {
+            "id": "furla",
+            "title": "Social Contents",
+            "projectScope": ["Concept mood board", "Creative supervision"],
+            "agency": "Low",
+            "year": "2020",
+            "galleryName": "Furla",
+            "images": [
+                { "id": "furla", "fileName": "furla.jpg" },
+                { "id": "furla-2", "fileName": "furla-2.jpg" },
+                { "id": "furla-3", "fileName": "furla-3.jpg" },
+                { "id": "furla-4", "fileName": "furla-4.jpg" },
+                { "id": "furla-5", "fileName": "furla-5.jpg" },
+                { "id": "furla-6", "fileName": "furla-6.jpg" },
+                { "id": "furla-7", "fileName": "furla-7.jpg" },
+                { "id": "furla-8", "fileName": "furla-8.jpg" },
+                { "id": "furla-9", "fileName": "furla-9.jpg" },
+                { "id": "furla-10", "fileName": "furla-10.jpg" },
+                { "id": "furla-11", "fileName": "furla-11.jpg" },
+                { "id": "furla-12", "fileName": "furla-12.jpg" }
+            ]
+        },
+        {
+            "id": "colmar",
+            "title": "Social Contents Creation",
+            "projectScope": [
+                "Creative supervision",
+                "Production supervision",
+                "Post-production supervision"
+            ],
+            "agency": "Low",
+            "year": "2020",
+            "galleryName": "Colmar",
+            "images": [
+                { "id": "colmar", "fileName": "colmar.jpg" },
+                { "id": "colmar-2", "fileName": "colmar-2.jpg" },
+                { "id": "colmar-3", "fileName": "colmar-3.jpg" },
+                { "id": "colmar-4", "fileName": "colmar-4.jpg" },
+                { "id": "colmar-5", "fileName": "colmar-5.jpg" },
+                { "id": "colmar-6", "fileName": "colmar-6.jpg" },
+                { "id": "colmar-7", "fileName": "colmar-7.jpg" },
+                { "id": "colmar-8", "fileName": "colmar-8.jpg" },
+                { "id": "colmar-9", "fileName": "colmar-9.jpg" },
+                { "id": "colmar-10", "fileName": "colmar-10.jpg" },
+                { "id": "colmar-11", "fileName": "colmar-11.jpg" },
+                { "id": "colmar-12", "fileName": "colmar-12.jpg" },
+                { "id": "colmar-13", "fileName": "colmar-13.jpg" },
+                { "id": "colmar-14", "fileName": "colmar-14.jpg" },
+                { "id": "colmar-15", "fileName": "colmar-15.jpg" }
+            ]
+        },
+        {
+            "id": "clinique",
+            "title": "Social Contents",
+            "projectScope": [
+                "Concept and mood board",
+                "Photography mood study",
+                "Production supervision",
+                "Post-production supervision"
+            ],
+            "agency": "Low",
+            "year": "2020",
+            "galleryName": "Clinique",
+            "images": [
+                { "id": "clinique", "fileName": "clinique.jpg" },
+                { "id": "clinique-2", "fileName": "clinique-2.jpg" },
+                { "id": "clinique-3", "fileName": "clinique-3.jpg" },
+                { "id": "clinique-4", "fileName": "clinique-4.jpg" },
+                { "id": "clinique-5", "fileName": "clinique-5.jpg" },
+                { "id": "clinique-6", "fileName": "clinique-6.jpg" }
+            ]
+        },
+        {
+            "id": "kiko",
+            "title": "Social Contents",
+            "projectScope": [
+                "Concept and mood board",
+                "Casting direction",
+                "Art buyer supervision",
+                "Photographer proposal",
+                "Post-production supervision"
+            ],
+            "agency": "Low",
+            "year": "2016",
+            "galleryName": "Kiko",
+            "images": [
+                { "id": "kiko", "fileName": "kiko.jpg" },
+                { "id": "kiko-2", "fileName": "kiko-2.jpg" },
+                { "id": "kiko-3", "fileName": "kiko-3.jpg" },
+                { "id": "kiko-4", "fileName": "kiko-4.jpg" },
+                { "id": "kiko-5", "fileName": "kiko-5.jpg" },
+                { "id": "kiko-6", "fileName": "kiko-6.jpg" },
+                { "id": "kiko-7", "fileName": "kiko-7.jpg" },
+                { "id": "kiko-8", "fileName": "kiko-8.jpg" },
+                { "id": "kiko-9", "fileName": "kiko-9.jpg" }
+            ]
+        },
+        {
+            "id": "theDoubleF",
+            "title": "Getting to know.",
+            "projectScope": [
+                "Art direction supervision",
+                "Production supervision",
+                "Post-production supervision"
+            ],
+            "agency": "Low",
+            "year": "2019-2020",
+            "galleryName": "The DoubleF",
+            "videos": []
+        },
+        {
+            "id": "fielmann",
+            "title": "Cadore Craftmanship",
+            "projectScope": [
+                "Mood board",
+                "Set designer supervision",
+                "Post-production supervision"
+            ],
+            "galleryName": "Fielmann",
+            "videos": []
+        },
+        {
+            "id": "maxMara",
+            "title": "E-commerce Visual Guidelines",
+            "projectScope": [
+                "Visual guidelines document",
+                "Photography and lighting style proposals"
+            ],
+            "agency": "Low",
+            "year": "2018",
+            "galleryName": "Max Mara",
+            "images": [
+                { "id": "max-mara", "fileName": "max-mara.jpg" },
+                { "id": "max-mara-2", "fileName": "max-mara-2.jpg" },
+                { "id": "max-mara-3", "fileName": "max-mara-3.jpg" },
+                { "id": "max-mara-4", "fileName": "max-mara-4.jpg" },
+                { "id": "max-mara-5", "fileName": "max-mara-5.jpg" },
+                { "id": "max-mara-6", "fileName": "max-mara-6.jpg" },
+                { "id": "max-mara-7", "fileName": "max-mara-7.jpg" },
+                { "id": "max-mara-8", "fileName": "max-mara-8.jpg" }
+            ]
+        },
+        {
+            "id": "twinset",
+            "title": "E-commerce Visual Guidelines",
+            "projectScope": [
+                "Casting coordination",
+                "Stylist proposal",
+                "Lighting study management"
+            ],
+            "agency": "Low",
+            "year": "2018",
+            "galleryName": "Twinset",
+            "images": [
+                { "id": "twinset", "fileName": "twinset.jpg" },
+                { "id": "twinset-2", "fileName": "twinset-2.jpg" },
+                { "id": "twinset-3", "fileName": "twinset-3.jpg" },
+                { "id": "twinset-4", "fileName": "twinset-4.jpg" },
+                { "id": "twinset-5", "fileName": "twinset-5.jpg" },
+                { "id": "twinset-6", "fileName": "twinset-6.jpg" },
+                { "id": "twinset-7", "fileName": "twinset-7.jpg" },
+                { "id": "twinset-8", "fileName": "twinset-8.jpg" }
+            ]
+        },
+        {
+            "id": "isaia",
+            "title": "Social Contents Adaptation",
+            "projectScope": [
+                "Creative supervision",
+                "Social format supervision"
+            ],
+            "agency": "Low",
+            "year": "2020 to present",
+            "galleryName": "Isaia",
+            "images": [
+                { "id": "isaia", "fileName": "isaia.jpg" },
+                { "id": "isaia-2", "fileName": "isaia-2.jpg" },
+                { "id": "isaia-3", "fileName": "isaia-3.jpg" },
+                { "id": "isaia-4", "fileName": "isaia-4.jpg" },
+                { "id": "isaia-5", "fileName": "isaia-5.jpg" },
+                { "id": "isaia-6", "fileName": "isaia-6.jpg" }
+            ]
+        },
+        {
+            "id": "fiorellaRubino",
+            "title": "Social Contents",
+            "projectScope": [
+                "Mood board",
+                "Photographer proposal",
+                "Art buyer supervision",
+                "Post-production supervision"
+            ],
+            "agency": "Low",
+            "year": "2018",
+            "galleryName": "Fiorella Rubino",
+            "images": [
+                {
+                    "id": "fiorella-rubino",
+                    "fileName": "fiorella-rubino.jpg"
+                },
+                {
+                    "id": "fiorella-rubino-2",
+                    "fileName": "fiorella-rubino-2.jpg"
+                },
+                {
+                    "id": "fiorella-rubino-3",
+                    "fileName": "fiorella-rubino-3.jpg"
+                },
+                {
+                    "id": "fiorella-rubino-4",
+                    "fileName": "fiorella-rubino-4.jpg"
+                },
+                {
+                    "id": "fiorella-rubino-5",
+                    "fileName": "fiorella-rubino-5.jpg"
+                }
+            ]
+        },
+        {
+            "id": "elenaMiro",
+            "title": "Social Contents",
+            "projectScope": [
+                "Concept and mood board",
+                "Art buyer supervision",
+                "Post-production supervision"
+            ],
+            "agency": "Low",
+            "year": "2018",
+            "galleryName": "Elena Mirò",
+            "images": [
+                { "id": "elena-miro", "fileName": "elena-miro.jpg" },
+                { "id": "elena-miro-2", "fileName": "elena-miro-2.jpg" },
+                { "id": "elena-miro-3", "fileName": "elena-miro-3.jpg" },
+                { "id": "elena-miro-4", "fileName": "elena-miro-4.jpg" },
+                { "id": "elena-miro-5", "fileName": "elena-miro-5.jpg" },
+                { "id": "elena-miro-6", "fileName": "elena-miro-6.jpg" }
+            ]
+        },
+        {
+            "id": "schedoni",
+            "title": "Digital Lookbook",
+            "projectScope": [
+                "Concept and mood board",
+                "Set design management",
+                "Lighting study supervision",
+                "Post-production supervision"
+            ],
+            "agency": "Low",
+            "year": "2018",
+            "galleryName": "Schedoni",
+            "images": [
+                { "id": "schedoni", "fileName": "schedoni.jpg" },
+                { "id": "schedoni-2", "fileName": "schedoni-2.jpg" },
+                { "id": "schedoni-3", "fileName": "schedoni-3.jpg" },
+                { "id": "schedoni-4", "fileName": "schedoni-4.jpg" },
+                { "id": "schedoni-5", "fileName": "schedoni-5.jpg" }
+            ]
+        },
+        {
+            "id": "giuseppeZanotti",
+            "title": "Social Contents",
+            "projectScope": ["Mood board", "Production supervision"],
+            "agency": "Low",
+            "year": "2018",
+            "galleryName": "Giuseppe Zanotti",
+            "images": [
+                {
+                    "id": "giuseppe-zanotti",
+                    "fileName": "giuseppe-zanotti.jpg"
+                },
+                {
+                    "id": "giuseppe-zanotti-2",
+                    "fileName": "giuseppe-zanotti-2.jpg"
+                },
+                {
+                    "id": "giuseppe-zanotti-3",
+                    "fileName": "giuseppe-zanotti-3.jpg"
+                },
+                {
+                    "id": "giuseppe-zanotti-4",
+                    "fileName": "giuseppe-zanotti-4.jpg"
+                }
+            ]
+        },
+        {
+            "id": "acquaDiParma",
+            "title": "Social Contents",
+            "projectScope": [
+                "Concept and mood board",
+                "Art buyer supervision",
+                "Post-production supervision"
+            ],
+            "agency": "Low",
+            "year": "2017",
+            "galleryName": "Acqua di Parma",
+            "images": [
+                {
+                    "id": "acqua-di-parma",
+                    "fileName": "acqua-di-parma.jpg"
+                },
+                {
+                    "id": "acqua-di-parma-2",
+                    "fileName": "acqua-di-parma-2.jpg"
+                },
+                {
+                    "id": "acqua-di-parma-3",
+                    "fileName": "acqua-di-parma-3.jpg"
+                },
+                {
+                    "id": "acqua-di-parma-4",
+                    "fileName": "acqua-di-parma-4.jpg"
+                }
+            ]
+        }
+    ],
+    "campaigns": [],
+    "graphicDesign": []
+}
