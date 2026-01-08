@@ -7,6 +7,7 @@ type GalleryHeaderProps = {
 const GalleryHeader = ({ galleryDetails }: GalleryHeaderProps) => {
     const {
         title,
+        galleryName,
         year,
         agency,
         projectScope,
@@ -14,34 +15,27 @@ const GalleryHeader = ({ galleryDetails }: GalleryHeaderProps) => {
         isPersonalProject,
     } = galleryDetails;
 
-    const scopes = projectScope?.join(' / ');
+    const scopes = projectScope?.join(' • ');
 
     return (
         <header>
+            <h3>{galleryName}</h3>
             <h2>{title}</h2>
             {projectScope && (
                 <p>
-                    <b>Project scope &mdash;</b> <span>{scopes}.</span>
+                    Project scope &mdash; <span>{scopes}.</span>
                 </p>
             )}
             {agency && (
                 <p>
-                    <b>Agency &mdash;</b> <span>{agency}.</span>
+                    Agency &mdash; <span>{agency}.</span>
                 </p>
             )}
-            {isPersonalProject && (
-                <p>
-                    <b>Personal Project.</b>
-                </p>
-            )}
-            {isFreelance && (
-                <p>
-                    <b>Freelance.</b>
-                </p>
-            )}
+            {isPersonalProject && <p>Personal Project.</p>}
+            {isFreelance && <p>Freelance.</p>}
             {year && (
                 <p>
-                    <b>Year &mdash;</b> <span>{year}.</span>
+                    Year &mdash; <span>{year}.</span>
                 </p>
             )}
         </header>
