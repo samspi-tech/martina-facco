@@ -21,3 +21,5 @@ export type Galleries = {
     campaigns: Gallery[];
     graphicDesign: Gallery[];
 };
+
+export type Section = 'artDirection' | 'campaigns' | 'graphicDesign';

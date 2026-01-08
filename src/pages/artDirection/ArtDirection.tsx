@@ -8,7 +8,13 @@ const ArtDirection = () => {
     return (
         <section className={styles.cardsContainer}>
             {galleries?.artDirection.map((gallery) => {
-                return <GalleryCard key={gallery.id} gallery={gallery} />;
+                return (
+                    <GalleryCard
+                        key={gallery.id}
+                        gallery={gallery}
+                        sectionName="artDirection"
+                    />
+                );
             })}
         </section>
     );
