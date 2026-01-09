@@ -38,7 +38,7 @@ const GalleryPagination = ({
                     <span>{prevGalleryName}</span>
                 </Button>
             ) : (
-                <span></span>
+                <div></div>
             )}
             {hasNextPage ? (
                 <Button
@@ -50,7 +50,7 @@ const GalleryPagination = ({
                     <FaChevronRight />
                 </Button>
             ) : (
-                <span></span>
+                <div></div>
             )}
         </footer>
     );
