@@ -1,5 +1,6 @@
 .gallery {
     height: 100%;
+    scroll-margin-top: 3rem;
 
     display: grid;
     grid-template-rows: auto 1fr auto;
@@ -8,9 +9,9 @@
         padding-bottom: 3rem;
 
         & h3 {
+            font-weight: 800;
             font-size: 2.5rem;
             color: var(--main);
-            font-weight: 800;
             letter-spacing: -1.5px;
         }
 

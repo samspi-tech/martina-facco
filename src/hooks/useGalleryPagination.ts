@@ -1,12 +1,15 @@
 import { useNavigate } from 'react-router';
 import type { Galleries, Section } from '@/utils/types.ts';
+import type { RefObject } from 'react';
 
 export const useGalleryPagination = (
     section: Section,
     galleries: Galleries,
-    galleryId: string
+    galleryId: string,
+    ref: RefObject<HTMLElement | null>
 ) => {
     const navigate = useNavigate();
+
     const gallery = galleries[section];
     const galleriesNum = gallery.length - 1;
 
@@ -26,14 +29,18 @@ export const useGalleryPagination = (
     const handlePrevGallery = () => {
         if (hasPrevPage) {
             const prevGalleryId = gallery.at(prevGallery)?.id;
+
             navigate(`/${section}/${prevGalleryId}`);
+            ref.current?.scrollIntoView();
         }
     };
 
     const handleNextGallery = () => {
         if (hasNextPage) {
             const nextGalleryId = gallery.at(nextGallery)?.id;
+
             navigate(`/${section}/${nextGalleryId}`);
+            ref.current?.scrollIntoView();
         }
     };
 

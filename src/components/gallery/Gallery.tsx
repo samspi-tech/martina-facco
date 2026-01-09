@@ -5,9 +5,11 @@ import styles from './Gallery.module.css';
 import GalleryImage from '@/components/gallery/partials/GalleryImage.tsx';
 import GalleryHeader from '@/components/gallery/partials/GalleryHeader.tsx';
 import GalleryPagination from '@/components/gallery/partials/GalleryPagination.tsx';
+import { useRef } from 'react';
 
 const Gallery = () => {
     const { galleries } = useGalleries();
+    const topElementRef = useRef<HTMLElement | null>(null);
 
     const { section, id: galleryId } = useParams<{
         section: Section;
@@ -25,7 +27,7 @@ const Gallery = () => {
     const { images, galleryName } = filteredGallery!;
 
     return (
-        <section className={styles.gallery}>
+        <section ref={topElementRef} className={styles.gallery}>
             <GalleryHeader galleryDetails={filteredGallery!} />
             <div className={styles.imagesContainer}>
                 {images?.map((image) => (
@@ -40,6 +42,7 @@ const Gallery = () => {
                 section={section}
                 galleries={galleries}
                 galleryId={galleryId}
+                ref={topElementRef}
             />
         </section>
     );
