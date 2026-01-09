@@ -1,43 +1,24 @@
-import { NavLink } from 'react-router';
-import { mainNavLinks } from '@/components/navigation/dataSource.ts';
 import styles from './Navigation.module.css';
-import type { Dispatch, SetStateAction } from 'react';
 import Logo from '@/components/logo/Logo.tsx';
+import NavLinks from '@/components/navigation/partials/NavLinks.tsx';
+import { useState } from 'react';
+import NavButton from '@/components/navigation/partials/NavButton.tsx';
 
-type NavigationProps = {
-    isNavVisible: boolean;
-    setIsNavVisible: Dispatch<SetStateAction<boolean>>;
-};
+const Navigation = () => {
+    const [isVisible, setIsVisible] = useState(false);
 
-const Navigation = ({ isNavVisible, setIsNavVisible }: NavigationProps) => {
     const handleToggleNavVisibility = () => {
-        setIsNavVisible((prevState) => !prevState);
+        setIsVisible((prevState) => !prevState);
     };
 
     return (
         <nav className={styles.nav}>
             <Logo />
-            <ul
-                className={`${styles.navList} ${isNavVisible && styles.showNav}`}
-            >
-                {mainNavLinks.map((link) => (
-                    <li key={link.id}>
-                        <NavLink
-                            to={link.path}
-                            onClick={() => setIsNavVisible(false)}
-                        >
-                            {link.name}
-                        </NavLink>
-                    </li>
-                ))}
-            </ul>
-            <button
-                onClick={handleToggleNavVisibility}
-                className={`${isNavVisible ? styles.closeBtn : styles.openBtn}`}
-            >
-                <div></div>
-                <div></div>
-            </button>
+            <NavLinks isVisible={isVisible} setIsVisible={setIsVisible} />
+            <NavButton
+                isVisible={isVisible}
+                toggle={handleToggleNavVisibility}
+            />
         </nav>
     );
 };

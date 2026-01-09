@@ -12,13 +12,10 @@
 
     & button {
         border: none;
+        cursor: pointer;
         min-width: 5rem;
         min-height: 5rem;
         background-color: transparent;
-
-        position: absolute;
-        right: 3rem;
-        top: 1.5rem;
 
         display: flex;
         align-items: center;
@@ -35,8 +32,8 @@
     z-index: 999;
     position: fixed;
     visibility: hidden;
-    backdrop-filter: blur(2rem);
-    background-color: rgb(7, 6, 5, 0.8);
+    backdrop-filter: blur(20px);
+    background-color: rgba(7, 6, 5, 0.8);
 
     display: flex;
     flex-wrap: wrap;
@@ -46,14 +43,14 @@
     gap: 5rem;
 
     @media (min-width: 1038px) {
+        z-index: auto;
         opacity: 100%;
-        position: relative;
+        position: static;
         visibility: visible;
         backdrop-filter: none;
         background-color: transparent;
 
         flex-direction: row;
-        justify-content: space-between;
     }
 
     & li {
@@ -74,8 +71,8 @@
         text-transform: uppercase;
 
         &:global(.active) {
-            margin-bottom: -1px;
             color: var(--main);
+            margin-bottom: -1px;
             border-bottom: 1px solid var(--main);
         }
 
