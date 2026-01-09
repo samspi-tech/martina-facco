@@ -5,6 +5,7 @@ import {
     EMAILJS_PUBLIC_KEY,
     EMAILJS_SERVICE_ID,
     EMAILJS_TEMPLATE_ID,
+    TEN_SECONDS,
 } from '@/utils/constants.ts';
 import ReCAPTCHA from 'react-google-recaptcha';
 import toast from 'react-hot-toast';
@@ -28,7 +29,10 @@ export const useEmailJs = (reset: () => void) => {
                 EMAILJS_SERVICE_ID,
                 EMAILJS_TEMPLATE_ID,
                 templateParams,
-                { publicKey: EMAILJS_PUBLIC_KEY }
+                {
+                    publicKey: EMAILJS_PUBLIC_KEY,
+                    limitRate: { throttle: TEN_SECONDS },
+                }
             );
 
             reset();
