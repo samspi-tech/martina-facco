@@ -4,6 +4,7 @@ import type { Section } from '@/utils/types.ts';
 import styles from './Gallery.module.css';
 import GalleryImage from '@/components/gallery/partials/GalleryImage.tsx';
 import GalleryHeader from '@/components/gallery/partials/GalleryHeader.tsx';
+import GalleryPagination from '@/components/gallery/partials/GalleryPagination.tsx';
 
 const Gallery = () => {
     const { galleries } = useGalleries();
@@ -13,7 +14,7 @@ const Gallery = () => {
         id: string;
     }>();
 
-    if (!galleries || !section) return null;
+    if (!galleries || !section || !galleryId) return null;
 
     const filteredGallery = galleries[section]
         .filter(({ id }) => {
@@ -35,6 +36,11 @@ const Gallery = () => {
                     />
                 ))}
             </div>
+            <GalleryPagination
+                section={section}
+                galleries={galleries}
+                galleryId={galleryId}
+            />
         </section>
     );
 };

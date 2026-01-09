@@ -1,4 +1,9 @@
 .gallery {
+    height: 100%;
+
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+
     & header {
         padding-bottom: 3rem;
 
@@ -16,7 +21,7 @@
             padding-bottom: 2rem;
             letter-spacing: -1.5px;
 
-            @media(min-width: 500px) {
+            @media (min-width: 500px) {
                 font-size: 5rem;
             }
         }
@@ -28,6 +33,47 @@
 
             & span {
                 color: var(--secondary);
+            }
+        }
+    }
+
+    & footer {
+        padding-top: 4rem;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+
+        @media (min-width: 700px) {
+            gap: 1.5rem;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        & button {
+            gap: 1.5rem;
+            width: 100%;
+            color: var(--white);
+            background-color: transparent;
+            border: 1px solid var(--secondary);
+
+            @media (min-width: 1024px) {
+                border: none;
+                font-size: 1.8rem;
+                width: fit-content;
+            }
+
+            & svg {
+                transition: transform 0.2s linear;
+            }
+
+            &:first-child:hover svg {
+                transform: translateX(-5px);
+            }
+
+            &:last-child:hover svg {
+                transform: translateX(5px);
             }
         }
     }
