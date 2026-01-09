@@ -27,6 +27,7 @@ const GalleryPagination = ({
         <footer>
             {hasPrevPage ? (
                 <Button
+                    variant="outlinePrimary"
                     aria-label="Previous gallery"
                     onClick={handlePrevGallery}
                 >
@@ -37,7 +38,11 @@ const GalleryPagination = ({
                 <span></span>
             )}
             {hasNextPage ? (
-                <Button aria-label="Next gallery" onClick={handleNextGallery}>
+                <Button
+                    variant="outlinePrimary"
+                    aria-label="Next gallery"
+                    onClick={handleNextGallery}
+                >
                     <span>{nextGalleryName}</span>
                     <FaChevronRight />
                 </Button>

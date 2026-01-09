@@ -5,11 +5,9 @@
     font-size: 1.5rem;
     min-height: 5.5rem;
     min-width: 12.1rem;
-    color: var(--black);
     padding: 1.2rem 3.6rem;
     letter-spacing: 0.1rem;
     text-transform: uppercase;
-    background-color: var(--white);
     font-family: 'Montserrat', sans-serif;
 
     display: flex;
@@ -24,4 +22,15 @@
         outline-offset: 0.4rem;
         outline: 3px solid var(--white);
     }
+}
+
+.primary {
+    color: var(--black);
+    background-color: var(--white);
+}
+
+.outlinePrimary {
+    color: var(--white);
+    background-color: transparent;
+    border: 1px solid var(--secondary);
 }

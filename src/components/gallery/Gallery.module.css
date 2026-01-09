@@ -54,9 +54,6 @@
         & button {
             gap: 1.5rem;
             width: 100%;
-            color: var(--white);
-            background-color: transparent;
-            border: 1px solid var(--secondary);
 
             @media (min-width: 1024px) {
                 border: none;
