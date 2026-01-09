@@ -28,7 +28,10 @@ const Gallery = () => {
 
     return (
         <section ref={topElementRef} className={styles.gallery}>
-            <GalleryHeader galleryDetails={filteredGallery!} />
+            <GalleryHeader
+                section={section}
+                galleryDetails={filteredGallery!}
+            />
             <div className={styles.imagesContainer}>
                 {images?.map((image) => (
                     <GalleryImage
