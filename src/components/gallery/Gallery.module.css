@@ -86,8 +86,9 @@
             width: 100%;
 
             @media (min-width: 1024px) {
+                padding: 0;
                 border: none;
-                font-size: 1.8rem;
+                font-size: 2rem;
                 width: fit-content;
             }
 
