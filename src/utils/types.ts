@@ -1,4 +1,4 @@
-type media = {
+export type Media = {
     id: string;
     fileName: string;
 };
@@ -12,8 +12,8 @@ export type Gallery = {
     isPersonalProject?: boolean;
     year?: string;
     galleryName: string;
-    images?: media[];
-    videos?: media[];
+    images?: Media[];
+    videos?: Media[];
 };
 
 export type Galleries = {

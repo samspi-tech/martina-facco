@@ -1,0 +1,25 @@
+.customSwiper {
+    & div:global(.swiper-button-prev),
+    & div:global(.swiper-button-next) {
+        width: 5rem;
+        height: 5rem;
+        display: none;
+        padding: 0.5rem;
+        color: var(--black);
+        background-color: var(--white);
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+        transition: background-color 0.2s linear;
+
+        @media (min-width: 1038px) {
+            display: flex;
+        }
+
+        & svg {
+            stroke: var(--black);
+        }
+
+        &:hover {
+            background-color: var(--main);
+        }
+    }
+}
