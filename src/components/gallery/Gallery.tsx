@@ -9,7 +9,7 @@ import { useRef } from 'react';
 
 const Gallery = () => {
     const { galleries } = useGalleries();
-    const topElementRef = useRef<HTMLElement | null>(null);
+    const topElementRef = useRef<HTMLElement>(null);
 
     const { section, id: galleryId } = useParams<{
         section: Section;

@@ -11,7 +11,7 @@ import ReCAPTCHA from 'react-google-recaptcha';
 import toast from 'react-hot-toast';
 
 export const useEmailJs = (reset: () => void) => {
-    const recaptchaRef = useRef<ReCAPTCHA | null>(null);
+    const recaptchaRef = useRef<ReCAPTCHA>(null);
     const [isSubmitting, setIsSubmitting] = useState(false);
 
     const sendEmail = async (data: ContactMeTypes) => {
