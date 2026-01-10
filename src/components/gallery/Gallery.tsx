@@ -14,9 +14,9 @@ import type { Swiper } from 'swiper/types';
 
 const Gallery = () => {
     const { galleries } = useGalleries();
+    const swiperRef = useRef<Swiper>(null);
     const topElementRef = useRef<HTMLElement>(null);
     const { dialogRef, handleToggleModal } = useModal();
-    const swiperRef = useRef<Swiper>(null);
 
     const { section, id: galleryId } = useParams<{
         section: Section;

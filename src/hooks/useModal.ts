@@ -5,10 +5,9 @@ export const useModal = () => {
 
     const handleToggleModal = () => {
         const dialog = dialogRef.current;
-
         if (!dialog) return;
 
-        if (dialog.hasAttribute('open')) {
+        if (dialog.open) {
             dialog.close();
             document.body.style.overflow = 'visible';
         } else {
