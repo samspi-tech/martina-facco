@@ -5,6 +5,11 @@
     max-width: 78rem;
     line-height: 1.5;
     text-wrap: balance;
+    color: var(--secondary);
+
+    & b {
+        color: var(--main);
+    }
 
     display: flex;
     flex-direction: column;
