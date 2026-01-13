@@ -2,7 +2,7 @@
     padding: 3rem;
     height: 100dvh;
     margin: 0 auto;
-    max-width: 600px;
+    max-width: 60rem;
 
     display: flex;
     flex-direction: column;
@@ -12,7 +12,7 @@
 
     & h1 {
         text-wrap: balance;
-        letter-spacing: -1px;
+        letter-spacing: -0.04em;
 
         display: flex;
         align-items: center;
@@ -24,7 +24,7 @@
 
         & span:last-child {
             padding: 1rem 0 1rem 2rem;
-            border-left: 1px solid var(--main);
+            border-left: 0.1rem solid var(--main);
         }
     }
 

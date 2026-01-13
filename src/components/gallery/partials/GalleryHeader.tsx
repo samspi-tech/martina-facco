@@ -30,19 +30,19 @@ const GalleryHeader = ({ section, galleryDetails }: GalleryHeaderProps) => {
             <h2>{title}</h2>
             {projectScope && (
                 <p>
-                    Project scope &mdash; <span>{scopes}.</span>
+                    Project scope &mdash; <span>{scopes}</span>
                 </p>
             )}
             {agency && (
                 <p>
-                    Agency &mdash; <span>{agency}.</span>
+                    Agency &mdash; <span>{agency}</span>
                 </p>
             )}
-            {isPersonalProject && <p>Personal Project.</p>}
-            {isFreelance && <p>Freelance.</p>}
+            {isPersonalProject && <p>Personal Project</p>}
+            {isFreelance && <p>Freelance</p>}
             {year && (
                 <p>
-                    Year &mdash; <span>{year}.</span>
+                    Year &mdash; <span>{year}</span>
                 </p>
             )}
         </header>

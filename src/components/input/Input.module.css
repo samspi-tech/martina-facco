@@ -11,18 +11,18 @@
     & textarea {
         border: none;
         font-size: 1.6rem;
-        padding: 1.4rem 1rem;
+        padding: 1em 0.5em;
         color: var(--black);
         background-color: var(--white);
         font-family: 'Montserrat', sans-serif;
 
         &:focus-visible {
-            outline-offset: 0.4rem;
+            outline-offset: 4px;
             outline: 3px solid var(--white);
         }
 
         &:disabled {
-            background-color: #808080;
+           filter: brightness(0.75);
         }
     }
 }

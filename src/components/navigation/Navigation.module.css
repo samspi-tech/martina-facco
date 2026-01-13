@@ -1,5 +1,6 @@
 .nav {
-    padding: 2rem 3rem;
+    height: 8.2rem;
+    padding: 1.6rem;
 
     display: flex;
     justify-content: space-between;
@@ -22,7 +23,7 @@
         flex-direction: column;
         justify-content: center;
 
-        @media (min-width: 1038px) {
+        @media (width >= 64.875rem) {
             display: none;
         }
     }
@@ -33,7 +34,7 @@
     position: fixed;
     visibility: hidden;
     backdrop-filter: blur(20px);
-    background-color: rgba(7, 6, 5, 0.8);
+    background-color: rgba(0, 0, 0, 0.8);
 
     display: flex;
     flex-wrap: wrap;
@@ -42,7 +43,7 @@
     justify-content: center;
     gap: 5rem;
 
-    @media (min-width: 1038px) {
+    @media (width >= 64.875rem) {
         z-index: auto;
         opacity: 100%;
         position: static;
@@ -57,7 +58,7 @@
         opacity: 0;
         transform: translateY(200rem);
 
-        @media (min-width: 1038px) {
+        @media (width >= 64.875rem) {
             opacity: 100%;
             transform: translateY(0);
         }
@@ -72,11 +73,11 @@
 
         &:global(.active) {
             color: var(--main);
-            margin-bottom: -1px;
-            border-bottom: 1px solid var(--main);
+            margin-bottom: -0.1rem;
+            border-bottom: 0.1rem solid var(--main);
         }
 
-        @media (min-width: 1038px) {
+        @media (width >= 64.875rem) {
             font-size: 1.4rem;
             position: relative;
             transition: color 0.2s linear;
@@ -86,8 +87,8 @@
 
                 &::after {
                     content: '';
-                    height: 1px;
                     z-index: -999;
+                    height: 0.1rem;
                     background-color: var(--main);
                     animation: show-underline 0.25s linear forwards;
 
@@ -100,7 +101,7 @@
             &:not(:hover) {
                 &::after {
                     content: '';
-                    height: 1px;
+                    height: 0.1rem;
                     background-color: var(--main);
                     animation: hide-underline 0.25s linear forwards;
 
@@ -117,7 +118,7 @@
     & div {
         width: 100%;
         transition: all 0.2s linear;
-        border-bottom: 1px solid var(--white);
+        border-bottom: 0.1rem solid var(--white);
     }
 
     & div:last-child {
@@ -130,9 +131,9 @@
 
     & div {
         width: 100%;
-        margin-bottom: -2px;
+        margin-bottom: -0.2rem;
         transition: all 0.2s linear;
-        border-bottom: 1px solid var(--white);
+        border-bottom: 0.1rem solid var(--white);
     }
 
     & div:first-child {

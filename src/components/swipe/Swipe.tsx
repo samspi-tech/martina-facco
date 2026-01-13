@@ -2,11 +2,13 @@ import { Swiper } from 'swiper/react';
 import styles from './Swipe.module.css';
 import type { PropsWithChildren, RefObject } from 'react';
 import type { Swiper as SwiperRef } from 'swiper/types';
-import { Navigation } from 'swiper/modules';
+import { Navigation, Pagination } from 'swiper/modules';
 // @ts-expect-error Cannot find module swiper/css or its corresponding type declarations.
 import 'swiper/css';
 // @ts-expect-error Cannot find module swiper/css/navigation or its corresponding type declarations.
 import 'swiper/css/navigation';
+// @ts-expect-error Cannot find module swiper/css/pagination or its corresponding type declarations.
+import 'swiper/css/pagination';
 
 type SwipeProps = {
     ref: RefObject<SwiperRef | null>;
@@ -15,13 +17,14 @@ type SwipeProps = {
 const Swipe = ({ children, ref }: PropsWithChildren<SwipeProps>) => {
     return (
         <Swiper
-            className={styles.customSwiper}
             onSwiper={(swiper) => {
                 ref.current = swiper;
             }}
-            modules={[Navigation]}
-            spaceBetween={30}
+            spaceBetween={15}
+            className={styles.customSwiper}
+            modules={[Navigation, Pagination]}
             navigation
+            pagination={{ clickable: true }}
         >
             {children}
         </Swiper>

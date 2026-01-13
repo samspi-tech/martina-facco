@@ -1,18 +1,17 @@
 .hero {
     height: 100%;
-    overflow: hidden;
+    padding: 0 1.6rem;
 
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    align-items: flex-start;
     gap: 5rem;
 
     & h1 {
         line-height: 1;
         font-size: 5rem;
-        max-width: 568px;
         font-weight: 800;
-        text-align: right;
+        max-width: 56.8rem;
         text-wrap: balance;
         letter-spacing: -3.5px;
         text-transform: uppercase;
@@ -22,15 +21,15 @@
         flex-direction: column;
         gap: 2rem;
 
-        @media (min-width: 375px) {
+        @media (width >= 23.4375rem) {
             font-size: 6rem;
         }
 
-        @media (min-width: 900px) {
+        @media (width >= 56.25rem) {
             font-size: 8rem;
         }
 
-        @media (min-width: 1000px) {
+        @media (width >= 62.5rem) {
             font-size: 9rem;
         }
 

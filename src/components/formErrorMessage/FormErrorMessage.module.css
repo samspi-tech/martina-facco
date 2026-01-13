@@ -1,8 +1,8 @@
 .errorMessage {
-    padding: 0.5rem;
     font-weight: 700;
     width: fit-content;
     margin-top: 0.2rem;
     color: var(--black);
+    padding: 0.4em 0.8em;
     background-color: var(--main);
 }

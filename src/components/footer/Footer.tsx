@@ -6,6 +6,7 @@ const Footer = () => {
 
     return (
         <footer className={styles.footer}>
+            <p>&copy;{currYear} Martina Facco. All rights reserved.</p>
             <ul>
                 {socialsList.map((social) => {
                     const { id, icon, name, link } = social;
@@ -20,7 +21,6 @@ const Footer = () => {
                     );
                 })}
             </ul>
-            <p>Copyright &copy; {currYear} &ndash; Martina Facco</p>
         </footer>
     );
 };

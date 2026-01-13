@@ -25,8 +25,8 @@ const Toast = () => {
             fontWeight: '500',
             lineHeight: '1.5',
             borderRadius: '0',
-            padding: '16px 24px',
             color: 'var(--black)',
+            padding: '1.6rem 2.4rem',
             boxShadow: '0 5px 10px rgba(0, 0, 0, 0.7)',
         },
     };
