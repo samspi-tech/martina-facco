@@ -196,3 +196,39 @@
         transition: all 0.2s linear;
     }
 }
+
+.customSwiper {
+    & div:global(.swiper-button-prev),
+    & div:global(.swiper-button-next) {
+        display: none;
+        color: var(--white);
+        background-color: var(--black);
+        border: 1px solid var(--secondary);
+
+        @media (width >= 64.875rem) {
+            width: 5rem;
+            height: 8rem;
+            padding: 1.5rem;
+
+            display: flex;
+        }
+    }
+
+    & div:global(.swiper-pagination) {
+        padding: 0.5rem;
+        width: fit-content;
+        background-color: rgba(0, 0, 0, 0.5);
+
+        left: 50%;
+        transform: translateX(-50%);
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        & span:global(.swiper-pagination-bullet),
+        & span:global(.swiper-pagination-bullet-active) {
+            background-color: #fff;
+        }
+    }
+}

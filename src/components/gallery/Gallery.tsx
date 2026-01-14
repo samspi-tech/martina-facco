@@ -8,9 +8,8 @@ import GalleryPagination from '@/components/gallery/partials/GalleryPagination.t
 import { useRef } from 'react';
 import Modal from '@/components/modal/Modal.tsx';
 import { useModal } from '@/hooks/useModal.ts';
-import { SwiperSlide } from 'swiper/react';
-import Swipe from '@/components/swipe/Swipe.tsx';
 import type { Swiper } from 'swiper/types';
+import GalleryLightbox from '@/components/gallery/partials/GalleryLightbox.tsx';
 
 const Gallery = () => {
     const { galleries } = useGalleries();
@@ -59,16 +58,11 @@ const Gallery = () => {
                 ref={topElementRef}
             />
             <Modal ref={dialogRef} onToggle={handleToggleModal}>
-                <Swipe ref={swiperRef}>
-                    {images?.map((image) => (
-                        <SwiperSlide key={image.id}>
-                            <GalleryImage
-                                fileName={image.fileName}
-                                galleryName={galleryName}
-                            />
-                        </SwiperSlide>
-                    ))}
-                </Swipe>
+                <GalleryLightbox
+                    ref={swiperRef}
+                    images={images}
+                    galleryName={galleryName}
+                />
             </Modal>
         </section>
     );

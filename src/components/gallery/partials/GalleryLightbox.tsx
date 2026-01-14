@@ -1,6 +1,6 @@
-import { Swiper } from 'swiper/react';
-import styles from './Swipe.module.css';
-import type { PropsWithChildren, RefObject } from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import styles from '../Gallery.module.css';
+import type { RefObject } from 'react';
 import type { Swiper as SwiperRef } from 'swiper/types';
 import { Navigation, Pagination } from 'swiper/modules';
 // @ts-expect-error Cannot find module swiper/css or its corresponding type declarations.
@@ -9,12 +9,20 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 // @ts-expect-error Cannot find module swiper/css/pagination or its corresponding type declarations.
 import 'swiper/css/pagination';
+import type { Media } from '@/utils/types.ts';
+import GalleryImage from '@/components/gallery/partials/GalleryImage.tsx';
 
-type SwipeProps = {
+type GalleryLightboxProps = {
+    galleryName: string;
+    images: Media[] | undefined;
     ref: RefObject<SwiperRef | null>;
 };
 
-const Swipe = ({ children, ref }: PropsWithChildren<SwipeProps>) => {
+const GalleryLightbox = ({
+    images,
+    ref,
+    galleryName,
+}: GalleryLightboxProps) => {
     return (
         <Swiper
             onSwiper={(swiper) => {
@@ -26,9 +34,16 @@ const Swipe = ({ children, ref }: PropsWithChildren<SwipeProps>) => {
             navigation
             pagination={{ clickable: true }}
         >
-            {children}
+            {images?.map((image) => (
+                <SwiperSlide key={image.id}>
+                    <GalleryImage
+                        fileName={image.fileName}
+                        galleryName={galleryName}
+                    />
+                </SwiperSlide>
+            ))}
         </Swiper>
     );
 };
 
-export default Swipe;
+export default GalleryLightbox;
