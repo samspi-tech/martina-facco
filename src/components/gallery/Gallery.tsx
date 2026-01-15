@@ -6,16 +6,10 @@ import GalleryImage from '@/components/gallery/partials/GalleryImage.tsx';
 import GalleryHeader from '@/components/gallery/partials/GalleryHeader.tsx';
 import GalleryPagination from '@/components/gallery/partials/GalleryPagination.tsx';
 import { useRef } from 'react';
-import Modal from '@/components/modal/Modal.tsx';
-import { useModal } from '@/hooks/useModal.ts';
-import type { Swiper } from 'swiper/types';
-import GalleryLightbox from '@/components/gallery/partials/GalleryLightbox.tsx';
 
 const Gallery = () => {
     const { galleries } = useGalleries();
-    const swiperRef = useRef<Swiper>(null);
     const topElementRef = useRef<HTMLElement>(null);
-    const { dialogRef, handleToggleModal } = useModal();
 
     const { section, id: galleryId } = useParams<{
         section: Section;
@@ -39,15 +33,11 @@ const Gallery = () => {
                 galleryDetails={filteredGallery!}
             />
             <div className={styles.allImagesContainer}>
-                {images?.map((image, i) => (
+                {images?.map((image) => (
                     <GalleryImage
                         key={image.id}
                         fileName={image.fileName}
                         galleryName={galleryName}
-                        onToggle={handleToggleModal}
-                        index={i}
-                        swiperRef={swiperRef}
-                        hasHoverEffect={true}
                     />
                 ))}
             </div>
@@ -57,13 +47,6 @@ const Gallery = () => {
                 galleryId={galleryId}
                 ref={topElementRef}
             />
-            <Modal ref={dialogRef} onToggle={handleToggleModal}>
-                <GalleryLightbox
-                    ref={swiperRef}
-                    images={images}
-                    galleryName={galleryName}
-                />
-            </Modal>
         </section>
     );
 };
