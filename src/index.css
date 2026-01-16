@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 * {
     margin: 0;
@@ -7,10 +7,9 @@
 }
 
 :root {
-    --black: rgb(7, 6, 5);
-    --white: oklch(93.6% 0.032 17.717);
-    --main: oklch(70.4% 0.191 22.216);
-    --secondary: oklch(86.9% 0.005 56.366);
+    --black: oklch(12.9% 0.042 264.695);
+    --white: oklch(98.4% 0.003 247.858);
+    --main: oklch(58.8% 0.158 241.966);
 }
 
 html {
@@ -18,10 +17,11 @@ html {
 }
 
 body {
+    line-height: 1.5;
     font-size: 1.6rem;
-    color: var(--main);
-    background-color: var(--black);
-    font-family: 'Montserrat', sans-serif;
+    color: var(--black);
+    background-color: var(--white);
+    font-family: 'Bodoni Moda', serif;
 }
 
 h1,
@@ -30,13 +30,22 @@ h3,
 h4,
 h5,
 h6 {
-    color: var(--white);
+    line-height: 1.1;
 }
 
 li {
     list-style: none;
 }
 
+a,
+button {
+    font-family: 'Inter', serif;
+}
+
 a {
     display: inline-block;
+}
+
+button {
+    cursor: pointer;
 }
