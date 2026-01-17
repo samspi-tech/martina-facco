@@ -15,8 +15,8 @@ const GalleryCard = ({ gallery, sectionName }: GalleryCardProps) => {
 
     return (
         <Link to={`/${sectionName}/${id}`} className={styles.galleryCard}>
-            <span>{images && <img src={imageSrc} alt={galleryName} />}</span>
             <span>{galleryName}</span>
+            <span>{images && <img src={imageSrc} alt={galleryName} />}</span>
         </Link>
     );
 };
