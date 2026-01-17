@@ -1,6 +1,6 @@
 import { useRef, useState } from 'react';
 import emailjs, { type EmailJSResponseStatus } from '@emailjs/browser';
-import type { ContactMeTypes } from '@/components/contactForm/contactMeSchema.ts';
+import type { ContactMeTypes } from '@/components/contactMeForm/contactMeSchema.ts';
 import {
     EMAILJS_PUBLIC_KEY,
     EMAILJS_SERVICE_ID,

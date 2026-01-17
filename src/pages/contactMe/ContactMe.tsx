@@ -1,7 +1,7 @@
-import ContactForm from '@/components/contactForm/ContactForm.tsx';
+import ContactMeForm from '@/components/contactMeForm/ContactMeForm.tsx';
 
 const ContactMe = () => {
-    return <ContactForm />;
+    return <ContactMeForm />;
 };
 
 export default ContactMe;

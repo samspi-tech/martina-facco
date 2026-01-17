@@ -1,7 +1,13 @@
 .inputContainer {
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 0.3rem;
+
+    &,
+    & input,
+    & textarea {
+        font-family: 'Iter', sans-serif;
+    }
 
     & textarea {
         resize: none;
@@ -9,20 +15,18 @@
 
     & input,
     & textarea {
-        border: none;
         font-size: 1.6rem;
         padding: 1em 0.5em;
         color: var(--black);
-        background-color: var(--white);
-        font-family: 'Montserrat', sans-serif;
+        border: 1px solid oklch(from var(--black) calc(l + 0.8) c h);
 
         &:focus-visible {
-            outline-offset: 4px;
-            outline: 3px solid var(--white);
+            outline-offset: 3px;
+            outline: 0.2rem solid var(--black);
         }
 
         &:disabled {
-           filter: brightness(0.75);
+            filter: brightness(0.75);
         }
     }
 }

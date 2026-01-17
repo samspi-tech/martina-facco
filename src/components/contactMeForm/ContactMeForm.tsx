@@ -1,20 +1,19 @@
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import ReCAPTCHA from 'react-google-recaptcha';
-
-import styles from './ContactForm.module.css';
+import styles from './ContactMeForm.module.css';
 import Input from '@/components/input/Input.tsx';
 import Button from '@/components/button/Button.tsx';
 import {
     contactMeSchema,
     type ContactMeTypes,
-} from '@/components/contactForm/contactMeSchema.ts';
+} from '@/components/contactMeForm/contactMeSchema.ts';
 import { SITE_KEY } from '@/utils/constants.ts';
 import Textarea from '@/components/textarea/Textarea.tsx';
 import { useEmailJs } from '@/hooks/useEmailJs.ts';
 import MiniSpinner from '@/components/miniSpinner/MiniSpinner.tsx';
 
-const ContactForm = () => {
+const ContactMeForm = () => {
     const { register, formState, reset, handleSubmit } =
         useForm<ContactMeTypes>({
             resolver: zodResolver(contactMeSchema),
@@ -25,7 +24,10 @@ const ContactForm = () => {
 
     return (
         <div className={styles.formContainer}>
-            <h2>Let's get in touch!</h2>
+            <hgroup>
+                <h2>Contact me</h2>
+                <p>I will get back to you asap!</p>
+            </hgroup>
             <form onSubmit={handleSubmit(sendEmail)}>
                 <Input
                     type="text"
@@ -69,11 +71,7 @@ const ContactForm = () => {
                     error={errors.message?.message}
                 />
                 <footer>
-                    <ReCAPTCHA
-                        theme="dark"
-                        ref={recaptchaRef}
-                        sitekey={SITE_KEY}
-                    />
+                    <ReCAPTCHA ref={recaptchaRef} sitekey={SITE_KEY} />
                     <Button type="submit" value="Send" disabled={isSubmitting}>
                         {isSubmitting ? <MiniSpinner /> : 'Send'}
                     </Button>
@@ -83,4 +81,4 @@ const ContactForm = () => {
     );
 };
 
-export default ContactForm;
+export default ContactMeForm;
