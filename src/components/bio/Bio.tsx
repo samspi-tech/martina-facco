@@ -4,8 +4,9 @@ const Bio = () => {
     return (
         <article className={styles.bio}>
             <p>
-                Hi, I am Martina a <b>Senior Art Director & Graphic Designer</b>{' '}
-                based in <b>Italy</b>.
+                Hi, <br /> I am Martina a{' '}
+                <b>Senior Art Director & Graphic Designer</b> based in{' '}
+                <b>Italy</b>.
             </p>
             <p>
                 Over the years, I have developed and perfected my creative and
