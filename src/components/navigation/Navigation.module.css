@@ -1,21 +1,24 @@
 .nav {
-    height: 8.2rem;
+    height: 6.2rem;
     padding: 1.6rem;
 
     display: flex;
-    justify-content: space-between;
+
+    @media (width >= 60.625rem) {
+        padding: 1.6rem 3.2rem;
+    }
 
     & button:focus-visible,
     & a:focus-visible {
         outline-offset: 0.4rem;
-        outline: 3px solid var(--white);
+        outline: 3px solid var(--black);
     }
 
     & button {
+        height: 3rem;
         border: none;
-        cursor: pointer;
-        min-width: 5rem;
-        min-height: 5rem;
+        width: 3.5rem;
+        margin-left: auto;
         background-color: transparent;
 
         display: flex;
@@ -23,27 +26,28 @@
         flex-direction: column;
         justify-content: center;
 
-        @media (width >= 64.875rem) {
+        @media (width >= 60.625rem) {
             display: none;
         }
     }
 }
 
 .navList {
+    width: 100%;
     z-index: 999;
     position: fixed;
     visibility: hidden;
-    backdrop-filter: blur(20px);
-    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(12px);
+    background-color: oklch(from var(--white) l c h / 0.75);
 
     display: flex;
     flex-wrap: wrap;
-    flex-direction: column;
     align-items: center;
+    flex-direction: column;
     justify-content: center;
-    gap: 5rem;
+    gap: 4rem;
 
-    @media (width >= 64.875rem) {
+    @media (width >= 60.625rem) {
         z-index: auto;
         opacity: 100%;
         position: static;
@@ -52,23 +56,24 @@
         background-color: transparent;
 
         flex-direction: row;
+        justify-content: space-between;
     }
 
     & li {
         opacity: 0;
         transform: translateY(200rem);
 
-        @media (width >= 64.875rem) {
+        @media (width >= 60.625rem) {
             opacity: 100%;
             transform: translateY(0);
         }
     }
 
     & a {
-        font-weight: 600;
-        font-size: 2.5rem;
+        font-size: 3rem;
+        color: var(--black);
         text-decoration: none;
-        color: var(--secondary);
+        letter-spacing: -0.02em;
         text-transform: uppercase;
 
         &:global(.active) {
@@ -77,7 +82,7 @@
             border-bottom: 0.1rem solid var(--main);
         }
 
-        @media (width >= 64.875rem) {
+        @media (width >= 60.625rem) {
             font-size: 1.4rem;
             position: relative;
             transition: color 0.2s linear;
@@ -118,7 +123,7 @@
     & div {
         width: 100%;
         transition: all 0.2s linear;
-        border-bottom: 0.1rem solid var(--white);
+        border-bottom: 0.1rem solid var(--black);
     }
 
     & div:last-child {
@@ -127,13 +132,13 @@
 }
 
 .closeBtn {
-    z-index: 999;
+    z-index: 99999;
 
     & div {
         width: 100%;
         margin-bottom: -0.2rem;
         transition: all 0.2s linear;
-        border-bottom: 0.1rem solid var(--white);
+        border-bottom: 0.1rem solid var(--black);
     }
 
     & div:first-child {
