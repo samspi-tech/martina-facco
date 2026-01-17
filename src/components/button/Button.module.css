@@ -1,18 +1,25 @@
 .button {
     border: none;
-    cursor: pointer;
     font-weight: 800;
     padding: 1em 2em;
     font-size: 1.5rem;
     min-width: 12.1rem;
     min-height: 5.5rem;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.05em;
     text-transform: uppercase;
-    font-family: 'Montserrat', sans-serif;
+    transition: background-color 0.2s linear;
 
     display: flex;
     align-items: center;
     justify-content: center;
+
+    &:hover {
+        background-color: oklch(from var(--main) calc(l + 0.1) c h);
+    }
+
+    &:active {
+        background-color: oklch(from var(--main) calc(l - 0.1) c h);
+    }
 
     &:disabled {
         filter: brightness(0.75);
@@ -25,12 +32,12 @@
 }
 
 .primary {
-    color: var(--black);
-    background-color: var(--white);
+    color: var(--white);
+    background-color: var(--main);
 }
 
 .outlinePrimary {
     color: var(--white);
     background-color: transparent;
-    border: 0.1rem solid var(--secondary);
+    border: 0.1rem solid var(--);
 }
