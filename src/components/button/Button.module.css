@@ -1,6 +1,5 @@
 .button {
     border: none;
-    font-weight: 800;
     padding: 1em 2em;
     font-size: 1.5rem;
     min-width: 12.1rem;
@@ -13,6 +12,21 @@
     align-items: center;
     justify-content: center;
 
+    &:disabled {
+        filter: brightness(0.75);
+    }
+
+    &:focus-visible {
+        outline-offset: 3px;
+        outline: 0.3rem solid var(--black);
+    }
+}
+
+.primary {
+    font-weight: 800;
+    color: var(--white);
+    background-color: var(--main);
+
     &:hover {
         background-color: oklch(from var(--main) calc(l + 0.1) c h);
     }
@@ -20,24 +34,12 @@
     &:active {
         background-color: oklch(from var(--main) calc(l - 0.1) c h);
     }
-
-    &:disabled {
-        filter: brightness(0.75);
-    }
-
-    &:focus-visible {
-        outline-offset: 4px;
-        outline: 3px solid var(--white);
-    }
-}
-
-.primary {
-    color: var(--white);
-    background-color: var(--main);
 }
 
 .outlinePrimary {
-    color: var(--white);
+    font-weight: 600;
+    color: var(--black);
     background-color: transparent;
-    border: 0.1rem solid var(--);
+    border: 0.1rem solid var(--black);
+    font-family: 'Bodoni Moda', serif;
 }
