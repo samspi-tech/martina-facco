@@ -1,20 +1,27 @@
 .footer {
     font-size: 1.4rem;
-    padding: 2rem 1.6rem 1rem;
+    padding: 1rem 1.6rem 0;
+    font-family: 'Iter', sans-serif;
+    background-color: oklch(from var(--black) calc(l + 0.85) c h);
 
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap: 0.5rem;
 
     &,
-    & a {
-        color: var(--secondary);
+    & a,
+    & a:visited {
+        color: oklch(from var(--black) calc(l + 0.5) c h);
     }
 
     @media (width >= 34.375rem) {
         flex-direction: row;
         align-items: center;
+        padding: 0.85rem 1.6rem;
+    }
+
+    @media (width >= 60.625rem) {
+        padding: 0.85rem 3.2rem;
     }
 
     & ul {
@@ -36,22 +43,18 @@
         transition: color 0.2s linear;
 
         &:hover {
-            color: var(--main);
-        }
-
-        &:visited {
-            color: var(--secondary);
+            color: var(--black);
         }
 
         &:focus-visible {
             outline-offset: -5px;
-            outline: 3px solid var(--white);
+            outline: 3px solid var(--black);
         }
     }
 
     & svg {
-        width: 2.7rem;
-        height: 2.7rem;
+        width: 2.5rem;
+        height: 2.5rem;
         vertical-align: middle;
     }
 }
