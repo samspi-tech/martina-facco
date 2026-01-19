@@ -23,3 +23,8 @@ export type Galleries = {
 };
 
 export type Section = 'artDirection' | 'campaigns' | 'graphicDesign';
+
+export type UniqueGalleryProps = {
+    galleryName: string;
+    images: Media[] | undefined;
+};

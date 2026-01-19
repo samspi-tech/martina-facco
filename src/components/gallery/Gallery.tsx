@@ -8,6 +8,7 @@ import GalleryPagination from '@/components/gallery/partials/GalleryPagination.t
 import { useRef } from 'react';
 import { EXCLUDED_GALLERIES, ONE_COLUMN_GALLERIES } from '@/utils/constants.ts';
 import CpCompanyGallery from '@/components/cpCompanyGallery/CpCompanyGallery.tsx';
+import ConbipelGallery from '@/components/conbipelGallery/ConbipelGallery.tsx';
 
 const Gallery = () => {
     const { galleries } = useGalleries();
@@ -36,6 +37,9 @@ const Gallery = () => {
             />
             {galleryName === 'C.P. Company' && (
                 <CpCompanyGallery images={images} galleryName={galleryName} />
+            )}
+            {galleryName === 'Conbipel' && (
+                <ConbipelGallery images={images} galleryName={galleryName} />
             )}
             {!EXCLUDED_GALLERIES.includes(galleryName) && (
                 <div

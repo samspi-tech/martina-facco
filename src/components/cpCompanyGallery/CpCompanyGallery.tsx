@@ -1,15 +1,10 @@
-import type { Media } from '@/utils/types.ts';
 import styles from './CpCompany.module.css';
 import { BASE_IMG_URL } from '@/utils/constants.ts';
 import { FaEye } from 'react-icons/fa';
 import { useState } from 'react';
+import type { UniqueGalleryProps } from '@/utils/types.ts';
 
-type CpCompanyGalleryProps = {
-    galleryName: string;
-    images: Media[] | undefined;
-};
-
-const CpCompanyGallery = ({ images, galleryName }: CpCompanyGalleryProps) => {
+const CpCompanyGallery = ({ images, galleryName }: UniqueGalleryProps) => {
     const [carouselImageIndex, setCarouselImageIndex] = useState(0);
 
     const handleCarouselImage = () => {
