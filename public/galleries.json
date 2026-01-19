@@ -32,15 +32,15 @@
             "year": "2022",
             "galleryName": "C.P. Company",
             "images": [
-                { "id": "cp-company", "fileName": "cp-company.jpg" },
-                { "id": "cp-company-2", "fileName": "cp-company-2.jpg" },
-                { "id": "cp-company-3", "fileName": "cp-company-3.jpg" },
-                { "id": "cp-company-4", "fileName": "cp-company-4.jpg" },
-                { "id": "cp-company-5", "fileName": "cp-company-5.jpg" },
                 { "id": "cp-company-6", "fileName": "cp-company-6.jpg" },
-                { "id": "cp-company-7", "fileName": "cp-company-7.jpg" },
+                { "id": "cp-company-5", "fileName": "cp-company-5.jpg" },
+                { "id": "cp-company-3", "fileName": "cp-company-3.jpg" },
                 { "id": "cp-company-8", "fileName": "cp-company-8.jpg" },
-                { "id": "cp-company-9", "fileName": "cp-company-9.jpg" }
+                { "id": "cp-company-9", "fileName": "cp-company-9.jpg" },
+                { "id": "cp-company-4", "fileName": "cp-company-4.jpg" },
+                { "id": "cp-company-7", "fileName": "cp-company-7.jpg" },
+                { "id": "cp-company", "fileName": "cp-company.jpg" },
+                { "id": "cp-company-2", "fileName": "cp-company-2.jpg" }
             ]
         },
         {
@@ -76,10 +76,10 @@
             "galleryName": "Fluid Echoes",
             "images": [
                 { "id": "fluid-echoes", "fileName": "fluid-echoes.jpg" },
-                { "id": "fluid-echoes-2", "fileName": "fluid-echoes-2.jpg" },
+                { "id": "fluid-echoes-5", "fileName": "fluid-echoes-5.jpg" },
                 { "id": "fluid-echoes-3", "fileName": "fluid-echoes-3.jpg" },
                 { "id": "fluid-echoes-4", "fileName": "fluid-echoes-4.jpg" },
-                { "id": "fluid-echoes-5", "fileName": "fluid-echoes-5.jpg" },
+                { "id": "fluid-echoes-2", "fileName": "fluid-echoes-2.jpg" },
                 { "id": "fluid-echoes-6", "fileName": "fluid-echoes-6.jpg" }
             ]
         },
@@ -94,8 +94,8 @@
                 { "id": "black-room-2", "fileName": "black-room-2.jpg" },
                 { "id": "black-room-3", "fileName": "black-room-3.jpg" },
                 { "id": "black-room-4", "fileName": "black-room-4.jpg" },
-                { "id": "black-room-5", "fileName": "black-room-5.jpg" },
-                { "id": "black-room-6", "fileName": "black-room-6.jpg" }
+                { "id": "black-room-6", "fileName": "black-room-6.jpg" },
+                { "id": "black-room-5", "fileName": "black-room-5.jpg" }
             ]
         },
         {

@@ -1,0 +1,61 @@
+.cpCompanyGalleryContainer {
+    @media (width > 48rem) {
+        padding: 0 1.6rem;
+    }
+}
+
+.carousel {
+    max-width: 120rem;
+    position: relative;
+    margin-bottom: 3rem;
+
+    display: flex;
+
+    & img {
+        width: 100%;
+        object-fit: cover;
+    }
+
+    & button {
+        position: absolute;
+        right: 0.5rem;
+        top: 0.5rem;
+
+        color: white;
+        padding: 0.15em;
+        font-size: 1.5rem;
+        border: 0.1rem solid white;
+        background-color: var(--main);
+        transition: background-color 0.2s linear;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &:hover {
+            background-color: oklch(from var(--main) calc(l + 0.1) c h);
+        }
+
+        &:active {
+            background-color: oklch(from var(--main) calc(l - 0.1) c h);
+        }
+
+        &:focus-visible {
+            outline: 0.3rem solid black;
+        }
+
+        @media (width > 60.625rem) {
+            padding: 0.25em;
+            font-size: 2rem;
+        }
+    }
+}
+
+.masonryLayout {
+    columns: 3;
+    gap: 0.7rem;
+
+    & img {
+        width: 100%;
+    }
+}

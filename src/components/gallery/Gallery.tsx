@@ -6,6 +6,8 @@ import GalleryImage from '@/components/gallery/partials/GalleryImage.tsx';
 import GalleryHeader from '@/components/gallery/partials/GalleryHeader.tsx';
 import GalleryPagination from '@/components/gallery/partials/GalleryPagination.tsx';
 import { useRef } from 'react';
+import { EXCLUDED_GALLERIES, ONE_COLUMN_GALLERIES } from '@/utils/constants.ts';
+import CpCompanyGallery from '@/components/cpCompanyGallery/CpCompanyGallery.tsx';
 
 const Gallery = () => {
     const { galleries } = useGalleries();
@@ -32,15 +34,22 @@ const Gallery = () => {
                 section={section}
                 galleryDetails={filteredGallery!}
             />
-            <div className={styles.allImagesContainer}>
-                {images?.map((image) => (
-                    <GalleryImage
-                        key={image.id}
-                        fileName={image.fileName}
-                        galleryName={galleryName}
-                    />
-                ))}
-            </div>
+            {galleryName === 'C.P. Company' && (
+                <CpCompanyGallery images={images} galleryName={galleryName} />
+            )}
+            {!EXCLUDED_GALLERIES.includes(galleryName) && (
+                <div
+                    className={`${ONE_COLUMN_GALLERIES.includes(galleryName) ? styles.oneColumnImagesContainer : styles.allImagesContainer}`}
+                >
+                    {images?.map((image) => (
+                        <GalleryImage
+                            key={image.id}
+                            fileName={image.fileName}
+                            galleryName={galleryName}
+                        />
+                    ))}
+                </div>
+            )}
             <GalleryPagination
                 section={section}
                 galleries={galleries}
