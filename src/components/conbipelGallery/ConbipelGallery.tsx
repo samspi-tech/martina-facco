@@ -19,6 +19,7 @@ const ConbipelGallery = ({ images, galleryName }: UniqueGalleryProps) => {
                     src={`${BASE_IMG_URL}/${images?.at(2)?.fileName}`}
                     alt={galleryName}
                 />
+                <div className={styles.loader}></div>
             </div>
             <div className={styles.oneColumnImages}>
                 {images?.slice(3, 6).map((image) => {
