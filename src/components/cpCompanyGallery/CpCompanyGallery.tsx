@@ -3,6 +3,7 @@ import { BASE_IMG_URL } from '@/utils/constants.ts';
 import { FaEye } from 'react-icons/fa';
 import { useState } from 'react';
 import type { UniqueGalleryProps } from '@/utils/types.ts';
+import GalleryImage from '@/components/gallery/partials/GalleryImage.tsx';
 
 const CpCompanyGallery = ({ images, galleryName }: UniqueGalleryProps) => {
     const [carouselImageIndex, setCarouselImageIndex] = useState(0);
@@ -30,12 +31,11 @@ const CpCompanyGallery = ({ images, galleryName }: UniqueGalleryProps) => {
                     const { id, fileName } = image;
 
                     return (
-                        <div key={id}>
-                            <img
-                                src={`${BASE_IMG_URL}/${fileName}`}
-                                alt={galleryName}
-                            />
-                        </div>
+                        <GalleryImage
+                            key={id}
+                            fileName={fileName}
+                            galleryName={galleryName}
+                        />
                     );
                 })}
             </div>

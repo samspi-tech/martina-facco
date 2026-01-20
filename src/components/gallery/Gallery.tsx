@@ -29,6 +29,9 @@ const Gallery = () => {
 
     const { images, galleryName } = filteredGallery!;
 
+    const isStandardGallery = !EXCLUDED_GALLERIES.includes(galleryName);
+    const isOneColumnGallery = ONE_COLUMN_GALLERIES.includes(galleryName);
+
     return (
         <section ref={topElementRef} className={styles.gallery}>
             <GalleryHeader
@@ -41,9 +44,9 @@ const Gallery = () => {
             {galleryName === 'Conbipel' && (
                 <ConbipelGallery images={images} galleryName={galleryName} />
             )}
-            {!EXCLUDED_GALLERIES.includes(galleryName) && (
+            {isStandardGallery && (
                 <div
-                    className={`${ONE_COLUMN_GALLERIES.includes(galleryName) ? styles.oneColumnImagesContainer : styles.allImagesContainer}`}
+                    className={`${isOneColumnGallery ? styles.oneColumnImagesContainer : styles.allImagesContainer}`}
                 >
                     {images?.map((image) => (
                         <GalleryImage

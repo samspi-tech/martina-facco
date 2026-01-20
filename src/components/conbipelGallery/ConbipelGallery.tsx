@@ -1,6 +1,7 @@
 import type { UniqueGalleryProps } from '@/utils/types.ts';
 import { BASE_IMG_URL } from '@/utils/constants.ts';
 import styles from './ConbipelGallery.module.css';
+import GalleryImage from '@/components/gallery/partials/GalleryImage.tsx';
 
 const ConbipelGallery = ({ images, galleryName }: UniqueGalleryProps) => {
     return (
@@ -24,10 +25,10 @@ const ConbipelGallery = ({ images, galleryName }: UniqueGalleryProps) => {
                     const { id, fileName } = image;
 
                     return (
-                        <img
+                        <GalleryImage
                             key={id}
-                            src={`${BASE_IMG_URL}/${fileName}`}
-                            alt={galleryName}
+                            fileName={fileName}
+                            galleryName={galleryName}
                         />
                     );
                 })}
@@ -37,12 +38,11 @@ const ConbipelGallery = ({ images, galleryName }: UniqueGalleryProps) => {
                     const { id, fileName } = image;
 
                     return (
-                        <div key={id}>
-                            <img
-                                src={`${BASE_IMG_URL}/${fileName}`}
-                                alt={galleryName}
-                            />
-                        </div>
+                        <GalleryImage
+                            key={id}
+                            fileName={fileName}
+                            galleryName={galleryName}
+                        />
                     );
                 })}
             </div>
@@ -51,10 +51,10 @@ const ConbipelGallery = ({ images, galleryName }: UniqueGalleryProps) => {
                     const { id, fileName } = image;
 
                     return (
-                        <img
+                        <GalleryImage
                             key={id}
-                            src={`${BASE_IMG_URL}/${fileName}`}
-                            alt={galleryName}
+                            fileName={fileName}
+                            galleryName={galleryName}
                         />
                     );
                 })}
