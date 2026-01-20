@@ -9,6 +9,7 @@ import { useRef } from 'react';
 import { EXCLUDED_GALLERIES, ONE_COLUMN_GALLERIES } from '@/utils/constants.ts';
 import CpCompanyGallery from '@/components/cpCompanyGallery/CpCompanyGallery.tsx';
 import ConbipelGallery from '@/components/conbipelGallery/ConbipelGallery.tsx';
+import ColmarOriginalsGallery from '@/components/colmarOriginalsGallery/ColmarOriginalsGallery.tsx';
 
 const Gallery = () => {
     const { galleries } = useGalleries();
@@ -43,6 +44,12 @@ const Gallery = () => {
             )}
             {galleryName === 'Conbipel' && (
                 <ConbipelGallery images={images} galleryName={galleryName} />
+            )}
+            {galleryName === 'Colmar Originals' && (
+                <ColmarOriginalsGallery
+                    images={images}
+                    galleryName={galleryName}
+                />
             )}
             {isStandardGallery && (
                 <div

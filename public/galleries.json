@@ -141,52 +141,52 @@
             "galleryName": "Colmar Originals",
             "images": [
                 {
-                    "id": "colmar-originals",
-                    "fileName": "colmar-originals.jpg"
+                    "id": "colmar-originals-10",
+                    "fileName": "colmar-originals-10.jpg"
                 },
                 {
-                    "id": "colmar-originals-2",
-                    "fileName": "colmar-originals-2.jpg"
-                },
-                {
-                    "id": "colmar-originals-3",
-                    "fileName": "colmar-originals-3.jpg"
-                },
-                {
-                    "id": "colmar-originals-4",
-                    "fileName": "colmar-originals-4.jpg"
-                },
-                {
-                    "id": "colmar-originals-5",
-                    "fileName": "colmar-originals-5.jpg"
-                },
-                {
-                    "id": "colmar-originals-6",
-                    "fileName": "colmar-originals-6.jpg"
-                },
-                {
-                    "id": "colmar-originals-7",
-                    "fileName": "colmar-originals-7.jpg"
+                    "id": "colmar-originals-12",
+                    "fileName": "colmar-originals-12.jpg"
                 },
                 {
                     "id": "colmar-originals-8",
                     "fileName": "colmar-originals-8.jpg"
                 },
                 {
+                    "id": "colmar-originals-2",
+                    "fileName": "colmar-originals-2.jpg"
+                },
+                {
+                    "id": "colmar-originals-4",
+                    "fileName": "colmar-originals-4.jpg"
+                },
+                {
                     "id": "colmar-originals-9",
                     "fileName": "colmar-originals-9.jpg"
                 },
                 {
-                    "id": "colmar-originals-10",
-                    "fileName": "colmar-originals-10.jpg"
+                    "id": "colmar-originals-5",
+                    "fileName": "colmar-originals-5.jpg"
+                },
+                {
+                    "id": "colmar-originals-3",
+                    "fileName": "colmar-originals-3.jpg"
+                },
+                {
+                    "id": "colmar-originals-6",
+                    "fileName": "colmar-originals-6.jpg"
                 },
                 {
                     "id": "colmar-originals-11",
                     "fileName": "colmar-originals-11.jpg"
                 },
                 {
-                    "id": "colmar-originals-12",
-                    "fileName": "colmar-originals-12.jpg"
+                    "id": "colmar-originals-7",
+                    "fileName": "colmar-originals-7.jpg"
+                },
+                {
+                    "id": "colmar-originals",
+                    "fileName": "colmar-originals.jpg"
                 }
             ]
         },

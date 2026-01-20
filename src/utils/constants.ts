@@ -7,5 +7,9 @@ export const EMAILJS_PUBLIC_KEY = `${import.meta.env.VITE_EMAILJS_PUBLIC_KEY}`;
 export const SITE_KEY = `${import.meta.env.VITE_SITE_KEY}`;
 export const BASE_IMG_URL = 'https://res.cloudinary.com/diz5tgmqg/image/upload';
 export const TEN_SECONDS = 10000;
-export const EXCLUDED_GALLERIES = ['C.P. Company', 'Conbipel'];
 export const ONE_COLUMN_GALLERIES = ['Fluid Echoes', 'Black Room'];
+export const EXCLUDED_GALLERIES = [
+    'C.P. Company',
+    'Conbipel',
+    'Colmar Originals',
+];
