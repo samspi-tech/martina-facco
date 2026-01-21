@@ -1,6 +1,12 @@
-export type Media = {
+export type Image = {
     id: string;
     fileName: string;
+};
+
+export type Video = {
+    id: string;
+    title: string;
+    source: string;
 };
 
 export type Gallery = {
@@ -12,8 +18,9 @@ export type Gallery = {
     isPersonalProject?: boolean;
     year?: string;
     galleryName: string;
-    images?: Media[];
-    videos?: Media[];
+    thumbnail?: string;
+    images?: Image[];
+    videos?: Video[];
 };
 
 export type Galleries = {
@@ -26,5 +33,5 @@ export type Section = 'artDirection' | 'campaigns' | 'graphicDesign';
 
 export type UniqueGalleryProps = {
     galleryName: string;
-    images: Media[] | undefined;
+    images: Image[] | undefined;
 };

@@ -160,3 +160,17 @@
         object-fit: cover;
     }
 }
+
+.allVideosContainer {
+    padding: 0 1.6rem;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 1.6rem;
+
+    & iframe {
+        border: none;
+        aspect-ratio: 2;
+    }
+}

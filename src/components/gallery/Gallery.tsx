@@ -10,6 +10,7 @@ import { EXCLUDED_GALLERIES, ONE_COLUMN_GALLERIES } from '@/utils/constants.ts';
 import CpCompanyGallery from '@/components/cpCompanyGallery/CpCompanyGallery.tsx';
 import ConbipelGallery from '@/components/conbipelGallery/ConbipelGallery.tsx';
 import ColmarOriginalsGallery from '@/components/colmarOriginalsGallery/ColmarOriginalsGallery.tsx';
+import GalleryVideo from '@/components/gallery/partials/GalleryVideo.tsx';
 
 const Gallery = () => {
     const { galleries } = useGalleries();
@@ -28,7 +29,7 @@ const Gallery = () => {
         })
         .at(0);
 
-    const { images, galleryName } = filteredGallery!;
+    const { images, galleryName, videos } = filteredGallery!;
 
     const isStandardGallery = !EXCLUDED_GALLERIES.includes(galleryName);
     const isOneColumnGallery = ONE_COLUMN_GALLERIES.includes(galleryName);
@@ -51,7 +52,7 @@ const Gallery = () => {
                     galleryName={galleryName}
                 />
             )}
-            {isStandardGallery && (
+            {images && isStandardGallery && (
                 <div
                     className={`${isOneColumnGallery ? styles.oneColumnImagesContainer : styles.allImagesContainer}`}
                 >
@@ -61,6 +62,13 @@ const Gallery = () => {
                             fileName={image.fileName}
                             galleryName={galleryName}
                         />
+                    ))}
+                </div>
+            )}
+            {videos && (
+                <div className={styles.allVideosContainer}>
+                    {videos.map((video) => (
+                        <GalleryVideo key={video.id} video={video} />
                     ))}
                 </div>
             )}

@@ -9,14 +9,18 @@ type GalleryCardProps = {
 };
 
 const GalleryCard = ({ gallery, sectionName }: GalleryCardProps) => {
-    const { galleryName, images, id } = gallery;
+    const { galleryName, images, id, thumbnail } = gallery;
 
-    const imageSrc = `${BASE_IMG_URL}/${images?.at(0)?.fileName}`;
+    const imageName = images ? images.at(0)?.fileName : thumbnail;
+
+    const imageSrc = `${BASE_IMG_URL}/${imageName}`;
 
     return (
         <Link to={`/${sectionName}/${id}`} className={styles.galleryCard}>
             <span>{galleryName}</span>
-            <span>{images && <img src={imageSrc} alt={galleryName} />}</span>
+            <span>
+                <img src={imageSrc} alt={galleryName} />
+            </span>
         </Link>
     );
 };
