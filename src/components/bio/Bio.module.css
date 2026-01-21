@@ -2,17 +2,17 @@
     height: 100%;
     margin: 0 auto;
     max-width: 78rem;
-    font-size: 3.2rem;
+    font-size: 2.5rem;
     padding: 0 1.6rem;
     text-wrap: balance;
-    color: var(--black);
+    color: var(--main);
     letter-spacing: -0.03em;
-
-    & b {
-        color: var(--main);
-    }
 
     display: flex;
     flex-direction: column;
     gap: 2rem;
+
+    @media (width >= 43.125rem) {
+        font-size: 3.2rem;
+    }
 }

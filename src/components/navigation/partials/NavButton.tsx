@@ -9,6 +9,7 @@ const NavButton = ({ toggle, isVisible }: NavButtonProps) => {
     return (
         <button
             onClick={toggle}
+            aria-label="Toggle navigation links"
             className={`${isVisible ? styles.closeBtn : styles.openBtn}`}
         >
             <div></div>

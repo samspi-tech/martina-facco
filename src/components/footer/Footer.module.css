@@ -10,7 +10,7 @@
     &,
     & a,
     & a:visited {
-        color: oklch(from var(--black) calc(l + 0.5) c h);
+        color: oklch(from var(--black) calc(l + 0.35) c h);
     }
 
     @media (width >= 34.375rem) {
