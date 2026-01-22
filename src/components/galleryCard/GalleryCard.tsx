@@ -9,9 +9,11 @@ type GalleryCardProps = {
 };
 
 const GalleryCard = ({ gallery, sectionName }: GalleryCardProps) => {
-    const { galleryName, images, id, thumbnail } = gallery;
+    const { galleryName, images, id, videos } = gallery;
 
-    const imageName = images ? images.at(0)?.fileName : thumbnail;
+    const imageName = images
+        ? images.at(0)?.fileName
+        : videos?.at(0)?.thumbnail;
 
     const imageSrc = `${BASE_IMG_URL}/${imageName}`;
 

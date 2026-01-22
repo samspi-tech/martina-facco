@@ -1,4 +1,4 @@
-export type Image = {
+type Image = {
     id: string;
     fileName: string;
 };
@@ -7,6 +7,7 @@ export type Video = {
     id: string;
     title: string;
     source: string;
+    thumbnail: string;
 };
 
 export type Gallery = {
@@ -18,7 +19,6 @@ export type Gallery = {
     isPersonalProject?: boolean;
     year?: string;
     galleryName: string;
-    thumbnail?: string;
     images?: Image[];
     videos?: Video[];
 };

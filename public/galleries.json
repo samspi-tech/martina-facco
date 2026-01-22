@@ -298,25 +298,28 @@
             "agency": "Low",
             "year": "2019-2020",
             "galleryName": "The DoubleF",
-            "thumbnail": "the-double-f.jpg",
             "videos": [
                 {
                     "id": "the-double-f",
+                    "thumbnail": "the-double-f.jpg",
                     "title": "TheDoubleF presents \"Getting to know\": Fashion Creator Simone Guidarelli",
                     "source": "tDTplz7AB_g"
                 },
                 {
                     "id": "the-double-f-2",
+                    "thumbnail": "the-double-f-2.jpg",
                     "title": "TheDoubleF presents \"Getting to know\": italian fashion stylist Carlotta Tabaroni",
                     "source": "vlFpB3bvgT4"
                 },
                 {
                     "id": "the-double-f-3",
+                    "thumbnail": "the-double-f-3.jpg",
                     "title": "TheDoubleF presents \"Getting to know\": Domenico Romeo.",
                     "source": "XMhRRfuB-F0"
                 },
                 {
                     "id": "the-double-f-4",
+                    "thumbnail": "the-double-f-4.jpg",
                     "title": "TheDoubleF presents \"Getting to know\": Grazia.It's Fashion Editor Bianca Luna Santoro",
                     "source": "x1Hu_Jzw90E"
                 }
@@ -331,12 +334,12 @@
                 "Post-production supervision"
             ],
             "galleryName": "Fielmann",
-            "thumbnail": "fielmann.jpg",
             "videos": [
                 {
                     "id": "fielmann",
-                    "title": "Cadore Craftmanship",
-                    "source": "n04tlEGcXDI"
+                    "source": "n04tlEGcXDI",
+                    "thumbnail": "fielmann.jpg",
+                    "title": "Cadore Craftmanship"
                 }
             ]
         },
