@@ -15,7 +15,7 @@
             margin-left: auto;
             color: var(--main);
             width: fit-content;
-            padding-bottom: 4rem;
+            margin-bottom: 4rem;
             text-decoration: none;
             letter-spacing: 0.01em;
             text-transform: uppercase;
@@ -26,6 +26,11 @@
 
             @media (width >= 60.625rem) {
                 display: none;
+            }
+
+            &:focus-visible {
+                outline-offset: 0.4rem;
+                outline: 0.3rem solid var(--black);
             }
         }
 
