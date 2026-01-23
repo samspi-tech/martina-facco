@@ -25,6 +25,7 @@ const GalleryCard = ({ gallery, sectionName }: GalleryCardProps) => {
     return (
         <Link to={`/${sectionName}/${id}`} className={styles.galleryCard}>
             <span>{galleryName}</span>
+            <span aria-hidden={true}></span>
             <span>
                 <img src={imageUrl} alt={galleryName} />
             </span>
