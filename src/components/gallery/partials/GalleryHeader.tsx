@@ -1,13 +1,10 @@
-import type { Gallery, Section } from '@/utils/types.ts';
-import { Link } from 'react-router';
-import { FaArrowLeft } from 'react-icons/fa';
+import type { Content } from '@/utils/types.ts';
 
 type GalleryHeaderProps = {
-    section: Section;
-    galleryDetails: Gallery;
+    galleryDetails: Content & { galleryName: string };
 };
 
-const GalleryHeader = ({ section, galleryDetails }: GalleryHeaderProps) => {
+const GalleryHeader = ({ galleryDetails }: GalleryHeaderProps) => {
     const {
         title,
         galleryName,
@@ -22,12 +19,12 @@ const GalleryHeader = ({ section, galleryDetails }: GalleryHeaderProps) => {
 
     return (
         <header>
-            <Link to={`/${section}`}>
-                <FaArrowLeft />
-                <span>back to the list of galleries</span>
-            </Link>
-            <h3>{galleryName}</h3>
-            <h2>{title}</h2>
+            {title && (
+                <>
+                    <h3>{galleryName}</h3>
+                    <h2>{title}</h2>
+                </>
+            )}
             {projectScope && (
                 <p>
                     Project scope &mdash; <span>{scopes}</span>

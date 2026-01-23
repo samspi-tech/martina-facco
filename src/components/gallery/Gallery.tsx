@@ -1,4 +1,4 @@
-import { useParams } from 'react-router';
+import { Link, useParams } from 'react-router';
 import { useGalleries } from '@/hooks/useGalleries.ts';
 import type { Section } from '@/utils/types.ts';
 import styles from './Gallery.module.css';
@@ -11,6 +11,7 @@ import CpCompanyGallery from '@/components/cpCompanyGallery/CpCompanyGallery.tsx
 import ConbipelGallery from '@/components/conbipelGallery/ConbipelGallery.tsx';
 import ColmarOriginalsGallery from '@/components/colmarOriginalsGallery/ColmarOriginalsGallery.tsx';
 import GalleryVideo from '@/components/gallery/partials/GalleryVideo.tsx';
+import { FaArrowLeft } from 'react-icons/fa';
 
 const Gallery = () => {
     const { galleries } = useGalleries();
@@ -29,49 +30,71 @@ const Gallery = () => {
         })
         .at(0);
 
-    const { images, galleryName, videos } = filteredGallery!;
+    const { galleryName, content } = filteredGallery!;
 
     const isStandardGallery = !EXCLUDED_GALLERIES.includes(galleryName);
     const isOneColumnGallery = ONE_COLUMN_GALLERIES.includes(galleryName);
 
     return (
         <section ref={topElementRef} className={styles.gallery}>
-            <GalleryHeader
-                section={section}
-                galleryDetails={filteredGallery!}
-            />
-            {galleryName === 'C.P. Company' && (
-                <CpCompanyGallery images={images} galleryName={galleryName} />
-            )}
-            {galleryName === 'Conbipel' && (
-                <ConbipelGallery images={images} galleryName={galleryName} />
-            )}
-            {galleryName === 'Colmar Originals' && (
-                <ColmarOriginalsGallery
-                    images={images}
-                    galleryName={galleryName}
-                />
-            )}
-            {images && isStandardGallery && (
-                <div
-                    className={`${isOneColumnGallery ? styles.oneColumnImagesContainer : styles.allImagesContainer}`}
-                >
-                    {images?.map((image) => (
-                        <GalleryImage
-                            key={image.id}
-                            fileName={image.fileName}
-                            galleryName={galleryName}
-                        />
-                    ))}
-                </div>
-            )}
-            {videos && (
-                <div className={styles.allVideosContainer}>
-                    {videos.map((video) => (
-                        <GalleryVideo key={video.id} video={video} />
-                    ))}
-                </div>
-            )}
+            <Link className={styles.navigateBackLink} to={`/${section}`}>
+                <FaArrowLeft />
+                <span>back to the list of galleries</span>
+            </Link>
+            {content.map((item) => {
+                const { id, videos, images } = item;
+
+                const galleryDetails = { ...item, galleryName };
+
+                return (
+                    <article key={id}>
+                        <GalleryHeader galleryDetails={galleryDetails} />
+                        {galleryName === 'C.P. Company' && (
+                            <CpCompanyGallery
+                                images={images}
+                                galleryName={galleryName}
+                            />
+                        )}
+                        {galleryName === 'Conbipel' && (
+                            <ConbipelGallery
+                                images={images}
+                                galleryName={galleryName}
+                            />
+                        )}
+                        {galleryName === 'Colmar Originals' && (
+                            <ColmarOriginalsGallery
+                                images={images}
+                                galleryName={galleryName}
+                            />
+                        )}
+                        {images && isStandardGallery && (
+                            <div
+                                className={`${isOneColumnGallery ? styles.oneColumnImagesContainer : styles.allImagesContainer} ${id === 'kiko-content-3' ? styles.kikoAsianTouchContainer : ''}`}
+                            >
+                                {images?.map((image) => (
+                                    <GalleryImage
+                                        key={image.id}
+                                        fileName={image.fileName}
+                                        galleryName={galleryName}
+                                    />
+                                ))}
+                            </div>
+                        )}
+                        {videos && (
+                            <div
+                                className={`${styles.allVideosContainer} ${id === 'clinique-content-2' ? styles.cliniqueVideoContainer : ''}`}
+                            >
+                                {videos.map((video) => (
+                                    <GalleryVideo
+                                        key={video.id}
+                                        video={video}
+                                    />
+                                ))}
+                            </div>
+                        )}
+                    </article>
+                );
+            })}
             <GalleryPagination
                 section={section}
                 galleries={galleries}

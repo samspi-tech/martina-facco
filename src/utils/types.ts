@@ -10,17 +10,22 @@ export type Video = {
     thumbnail: string;
 };
 
-export type Gallery = {
+export type Content = {
     id: string;
-    title: string;
+    title?: string;
     projectScope?: string[];
     agency?: string;
     isFreelance?: boolean;
     isPersonalProject?: boolean;
     year?: string;
-    galleryName: string;
     images?: Image[];
     videos?: Video[];
+};
+
+export type Gallery = {
+    id: string;
+    galleryName: string;
+    content: Content[];
 };
 
 export type Galleries = {
