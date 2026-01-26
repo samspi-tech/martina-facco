@@ -10,8 +10,8 @@ import { EXCLUDED_GALLERIES, ONE_COLUMN_GALLERIES } from '@/utils/constants.ts';
 import CpCompanyGallery from '@/components/cpCompanyGallery/CpCompanyGallery.tsx';
 import ConbipelGallery from '@/components/conbipelGallery/ConbipelGallery.tsx';
 import ColmarOriginalsGallery from '@/components/colmarOriginalsGallery/ColmarOriginalsGallery.tsx';
-import GalleryVideo from '@/components/gallery/partials/GalleryVideo.tsx';
 import { FaArrowLeft } from 'react-icons/fa';
+import GalleryVideoList from '@/components/gallery/partials/GalleryVideoList.tsx';
 
 const Gallery = () => {
     const { galleries } = useGalleries();
@@ -42,12 +42,12 @@ const Gallery = () => {
                 <span>back to the list of galleries</span>
             </Link>
             {content.map((item) => {
-                const { id, videos, images } = item;
+                const { id: contentId, videos, images } = item;
 
                 const galleryDetails = { ...item, galleryName };
 
                 return (
-                    <article key={id}>
+                    <article key={contentId}>
                         <GalleryHeader galleryDetails={galleryDetails} />
                         {galleryName === 'C.P. Company' && (
                             <CpCompanyGallery
@@ -69,7 +69,7 @@ const Gallery = () => {
                         )}
                         {images && isStandardGallery && (
                             <div
-                                className={`${isOneColumnGallery ? styles.oneColumnImagesContainer : styles.allImagesContainer} ${id === 'kiko-content-3' ? styles.kikoAsianTouchContainer : ''}`}
+                                className={`${isOneColumnGallery ? styles.oneColumnImagesContainer : styles.allImagesContainer} ${contentId === 'kiko-content-3' ? styles.kikoAsianTouchContainer : ''}`}
                             >
                                 {images?.map((image) => (
                                     <GalleryImage
@@ -81,16 +81,7 @@ const Gallery = () => {
                             </div>
                         )}
                         {videos && (
-                            <div
-                                className={`${styles.allVideosContainer} ${id === 'clinique-content-2' ? styles.cliniqueVideoContainer : ''}`}
-                            >
-                                {videos.map((video) => (
-                                    <GalleryVideo
-                                        key={video.id}
-                                        video={video}
-                                    />
-                                ))}
-                            </div>
+                            <GalleryVideoList videos={videos} id={contentId} />
                         )}
                     </article>
                 );
