@@ -2,32 +2,31 @@ import { Toaster } from 'react-hot-toast';
 
 const Toast = () => {
     const options = {
-        duration: 5000,
+        duration: 5000000,
         success: {
             style: {
-                background: 'var(--white)',
+                background: '#fff',
             },
             iconTheme: {
-                primary: 'var(--black)',
-                secondary: 'var(--white)',
+                primary: '#000',
+                secondary: '#fff',
             },
         },
         error: {
             style: {
-                background: 'var(--main)',
+                background: 'oklch(from red calc(l + 0.3) c h)',
             },
             iconTheme: {
-                primary: 'var(--black)',
-                secondary: 'var(--main)',
+                primary: '#000',
+                secondary: 'oklch(from red calc(l + 0.3) c h)',
             },
         },
         style: {
-            fontWeight: '500',
-            lineHeight: '1.5',
+            color: '#000',
+            lineHeight: '1.4',
             borderRadius: '0',
-            color: 'var(--black)',
-            padding: '1.6rem 2.4rem',
-            boxShadow: '0 5px 10px rgba(0, 0, 0, 0.7)',
+            padding: '1.6rem 2rem',
+            fontFamily: 'Iter, sans-serif',
         },
     };
 
