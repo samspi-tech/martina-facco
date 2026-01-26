@@ -6,18 +6,18 @@ import { type Dispatch, type SetStateAction } from 'react';
 
 type GalleryVideoProps = {
     video: Video;
-    currVideoPlaying: string | null;
-    setCurrVideoPlaying: Dispatch<SetStateAction<string | null>>;
+    videoPlaying: string | null;
+    setVideoPlaying: Dispatch<SetStateAction<string | null>>;
 };
 
 const GalleryVideo = ({
     video,
-    setCurrVideoPlaying,
-    currVideoPlaying,
+    videoPlaying,
+    setVideoPlaying,
 }: GalleryVideoProps) => {
     const { title, source, thumbnail, id } = video;
 
-    const isPlayVideo = currVideoPlaying === id;
+    const isPlayVideo = videoPlaying === id;
 
     return (
         <div className={styles.iframeContainer}>
@@ -25,7 +25,7 @@ const GalleryVideo = ({
                 <img src={`${BASE_IMG_URL}/${thumbnail}`} alt={title} />
                 <button
                     onClick={() => {
-                        setCurrVideoPlaying(id);
+                        setVideoPlaying(id);
                     }}
                     aria-label="Play the video"
                     className={isPlayVideo ? styles.animateVideoButton : ''}

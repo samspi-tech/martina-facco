@@ -5,17 +5,18 @@ import styles from './Gallery.module.css';
 import GalleryImage from '@/components/gallery/partials/GalleryImage.tsx';
 import GalleryHeader from '@/components/gallery/partials/GalleryHeader.tsx';
 import GalleryPagination from '@/components/gallery/partials/GalleryPagination.tsx';
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import { EXCLUDED_GALLERIES, ONE_COLUMN_GALLERIES } from '@/utils/constants.ts';
 import CpCompanyGallery from '@/components/cpCompanyGallery/CpCompanyGallery.tsx';
 import ConbipelGallery from '@/components/conbipelGallery/ConbipelGallery.tsx';
 import ColmarOriginalsGallery from '@/components/colmarOriginalsGallery/ColmarOriginalsGallery.tsx';
 import { FaArrowLeft } from 'react-icons/fa';
-import GalleryVideoList from '@/components/gallery/partials/GalleryVideoList.tsx';
+import GalleryVideo from '@/components/gallery/partials/GalleryVideo.tsx';
 
 const Gallery = () => {
     const { galleries } = useGalleries();
     const topElementRef = useRef<HTMLElement>(null);
+    const [videoPlaying, setVideoPlaying] = useState<string | null>('');
 
     const { section, id: galleryId } = useParams<{
         section: Section;
@@ -81,7 +82,18 @@ const Gallery = () => {
                             </div>
                         )}
                         {videos && (
-                            <GalleryVideoList videos={videos} id={contentId} />
+                            <div
+                                className={`${styles.allVideosContainer} ${contentId === 'clinique-content-2' ? styles.cliniqueVideoContainer : ''}`}
+                            >
+                                {videos.map((video) => (
+                                    <GalleryVideo
+                                        key={video.id}
+                                        video={video}
+                                        videoPlaying={videoPlaying}
+                                        setVideoPlaying={setVideoPlaying}
+                                    />
+                                ))}
+                            </div>
                         )}
                     </article>
                 );
