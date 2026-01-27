@@ -1,78 +1,102 @@
 .galleryCard {
     height: 25rem;
-    padding: 3rem 0;
-    position: relative;
-    text-decoration: none;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
 
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    & a {
+        height: 100%;
+        padding: 3rem 0;
+        position: relative;
+        text-decoration: none;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
 
-    &:focus-visible {
-        outline-offset: 0.3rem;
-        outline: 0.5rem solid var(--black);
-    }
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
 
-    & span:first-child {
-        color: #fff;
-        z-index: 20;
-        font-size: 4rem;
-        font-weight: 600;
-        text-wrap: nowrap;
-        margin-left: 1.6rem;
-        letter-spacing: -0.03em;
-        transition: all 0.2s linear;
-        font-family: 'Bodoni Moda', serif;
-    }
-
-    & span:nth-child(2) {
-        position: absolute;
-        inset: 0;
-        z-index: 10;
-
-        background: linear-gradient(
-            90deg,
-            oklch(from var(--main) l c h / 1),
-            oklch(from var(--main) l c h / 1),
-            oklch(from var(--main) l c h / 0.75),
-            oklch(from var(--main) l c h / 0.5)
-        );
-        transition: all 0.3s linear;
-    }
-
-    & span:last-child {
-        position: absolute;
-        inset: 0;
-        left: 25%;
-
-        z-index: -99;
-        filter: grayscale(1);
-        transition: all 0.3s linear;
-
-        & img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+        &:focus-visible {
+            outline-offset: 0.3rem;
+            outline: 0.5rem solid var(--black);
         }
-    }
 
-    @media (width >= 60.625rem) {
-        &:hover {
-            & span:first-child {
-                opacity: 0;
-            }
+        & span:first-child {
+            color: #fff;
+            z-index: 20;
+            font-size: 4rem;
+            font-weight: 600;
+            text-wrap: nowrap;
+            margin-left: 1.6rem;
+            letter-spacing: -0.03em;
+            transition: all 0.2s linear;
+            font-family: 'Bodoni Moda', serif;
+        }
 
-            & span:nth-child(2) {
-                right: 85%;
-                background: linear-gradient(var(--main));
-                box-shadow: 5px 0 5px rgba(0, 0, 0, 0.2);
-            }
+        & span:nth-child(2) {
+            position: absolute;
+            inset: 0;
+            z-index: 10;
 
-            & span:last-child {
-                filter: none;
-                left: 15%;
+            background: linear-gradient(
+                90deg,
+                oklch(from var(--main) l c h / 1),
+                oklch(from var(--main) l c h / 1),
+                oklch(from var(--main) l c h / 0.75),
+                oklch(from var(--main) l c h / 0.5)
+            );
+            transition: all 0.3s linear;
+        }
+
+        & span:last-child {
+            position: absolute;
+            inset: 0;
+            left: 25%;
+
+            z-index: -99;
+            filter: grayscale(1);
+            transition: all 0.3s linear;
+
+            & img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
             }
         }
+
+        @media (width >= 60.625rem) {
+            &:hover {
+                & span:first-child {
+                    opacity: 0;
+                }
+
+                & span:nth-child(2) {
+                    right: 85%;
+                    background: linear-gradient(var(--main));
+                    box-shadow: 5px 0 5px rgba(0, 0, 0, 0.2);
+                }
+
+                & span:last-child {
+                    filter: none;
+                    left: 15%;
+                }
+            }
+        }
+    }
+}
+
+.hideCard {
+    opacity: 0;
+    transform: translateY(10rem);
+}
+
+.showCard {
+    animation: show-card 0.5s linear forwards;
+}
+
+@keyframes show-card {
+    from {
+        opacity: 0;
+        transform: translateY(10rem);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }

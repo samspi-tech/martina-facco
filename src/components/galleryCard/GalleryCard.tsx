@@ -2,6 +2,7 @@ import type { Gallery, Section } from '@/utils/types.ts';
 import { BASE_IMG_URL } from '@/utils/constants.ts';
 import styles from './GalleryCard.module.css';
 import { Link } from 'react-router';
+import { useElementOnScreen } from '@/hooks/useElementOnScreen.ts';
 
 type GalleryCardProps = {
     gallery: Gallery;
@@ -10,6 +11,7 @@ type GalleryCardProps = {
 
 const GalleryCard = ({ gallery, sectionName }: GalleryCardProps) => {
     const { galleryName, id, content } = gallery;
+    const { containerRef, isVisible } = useElementOnScreen({ threshold: 0.2 });
 
     const firstGalleryContent = content.at(0);
 
@@ -23,13 +25,18 @@ const GalleryCard = ({ gallery, sectionName }: GalleryCardProps) => {
     const imageUrl = `${BASE_IMG_URL}/${imageName}`;
 
     return (
-        <Link to={`/${sectionName}/${id}`} className={styles.galleryCard}>
-            <span>{galleryName}</span>
-            <span aria-hidden={true}></span>
-            <span>
-                <img src={imageUrl} alt={galleryName} />
-            </span>
-        </Link>
+        <div ref={containerRef} className={styles.galleryCard}>
+            <Link
+                to={`/${sectionName}/${id}`}
+                className={`${isVisible ? styles.showCard : styles.hideCard}`}
+            >
+                <span>{galleryName}</span>
+                <span aria-hidden={true}></span>
+                <span>
+                    <img src={imageUrl} alt={galleryName} />
+                </span>
+            </Link>
+        </div>
     );
 };
 
