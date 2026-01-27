@@ -23,6 +23,7 @@ const GalleryCard = ({ gallery, sectionName }: GalleryCardProps) => {
         : firstVideoThumbnail;
 
     const imageUrl = `${BASE_IMG_URL}/${imageName}`;
+    const imageUrlPlaceholder = `${BASE_IMG_URL},w_150,e_blur/${imageName}`;
 
     return (
         <div ref={containerRef} className={styles.galleryCard}>
@@ -33,7 +34,11 @@ const GalleryCard = ({ gallery, sectionName }: GalleryCardProps) => {
                 <span>{galleryName}</span>
                 <span aria-hidden={true}></span>
                 <span>
-                    <img src={imageUrl} alt={galleryName} />
+                    {isVisible ? (
+                        <img src={imageUrl} alt={galleryName} />
+                    ) : (
+                        <img src={imageUrlPlaceholder} alt={galleryName} />
+                    )}
                 </span>
             </Link>
         </div>

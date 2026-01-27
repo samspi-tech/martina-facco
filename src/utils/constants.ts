@@ -5,7 +5,8 @@ export const EMAILJS_SERVICE_ID = `${import.meta.env.VITE_EMAILJS_SERVICE_ID}`;
 export const EMAILJS_TEMPLATE_ID = `${import.meta.env.VITE_EMAILJS_TEMPLATE_ID}`;
 export const EMAILJS_PUBLIC_KEY = `${import.meta.env.VITE_EMAILJS_PUBLIC_KEY}`;
 export const SITE_KEY = `${import.meta.env.VITE_SITE_KEY}`;
-export const BASE_IMG_URL = 'https://res.cloudinary.com/diz5tgmqg/image/upload';
+export const BASE_IMG_URL =
+    'https://res.cloudinary.com/diz5tgmqg/image/upload/q_auto,f_auto';
 export const BASE_VIDEO_URL = 'https://www.youtube.com/embed/';
 export const TEN_SECONDS = 10000;
 export const ONE_COLUMN_GALLERIES = ['Fluid Echoes', 'Black Room'];
