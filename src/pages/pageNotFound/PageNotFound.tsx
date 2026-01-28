@@ -10,13 +10,18 @@ const PageNotFound = () => {
     };
 
     return (
-        <div className={styles.pageNotFound}>
-            <h1>
-                <span>404</span>
-                <span>The page you were looking for could not be found</span>
-            </h1>
-            <Button onClick={handleNavigateHome}>Home</Button>
-        </div>
+        <>
+            <title>404 &#124; Page Not Found &mdash; Martina Facco</title>
+            <div className={styles.pageNotFound}>
+                <h1>
+                    <span>404</span>
+                    <span>
+                        The page you were looking for could not be found
+                    </span>
+                </h1>
+                <Button onClick={handleNavigateHome}>Home</Button>
+            </div>
+        </>
     );
 };
 

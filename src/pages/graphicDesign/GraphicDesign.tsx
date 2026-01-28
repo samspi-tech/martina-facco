@@ -1,5 +1,10 @@
 const GraphicDesign = () => {
-    return <div>Graphic Design</div>;
+    return (
+        <>
+            <title>Graphic Design &mdash; Martina Facco</title>
+            <div>Graphic Design</div>
+        </>
+    );
 };
 
 export default GraphicDesign;

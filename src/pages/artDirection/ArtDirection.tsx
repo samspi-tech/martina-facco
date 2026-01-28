@@ -9,17 +9,20 @@ const ArtDirection = () => {
     if (isLoading) return <Spinner />;
 
     return (
-        <section className={styles.cardsContainer}>
-            {galleries?.artDirection.map((gallery) => {
-                return (
-                    <GalleryCard
-                        key={gallery.id}
-                        gallery={gallery}
-                        sectionName="artDirection"
-                    />
-                );
-            })}
-        </section>
+        <>
+            <title>Art Direction &mdash; Martina Facco</title>
+            <section className={styles.cardsContainer}>
+                {galleries?.artDirection.map((gallery) => {
+                    return (
+                        <GalleryCard
+                            key={gallery.id}
+                            gallery={gallery}
+                            sectionName="artDirection"
+                        />
+                    );
+                })}
+            </section>
+        </>
     );
 };
 

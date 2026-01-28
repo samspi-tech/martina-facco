@@ -13,6 +13,7 @@ import ColmarOriginalsGallery from '@/components/colmarOriginalsGallery/ColmarOr
 import { FaArrowLeft } from 'react-icons/fa';
 import GalleryVideo from '@/components/gallery/partials/GalleryVideo.tsx';
 import Spinner from '@/components/spinner/Spinner.tsx';
+import { getSectionName } from '@/utils/helpers.ts';
 
 type GalleryParams = {
     id: string;
@@ -23,6 +24,7 @@ const Gallery = () => {
     const topElementRef = useRef<HTMLElement>(null);
     const { galleries, isLoading } = useGalleries();
     const { section, id: galleryId } = useParams() as GalleryParams;
+    const sectionName = getSectionName(section);
     const [videoPlaying, setVideoPlaying] = useState<string | null>('');
 
     if (isLoading || !galleries) return <Spinner />;
@@ -37,74 +39,77 @@ const Gallery = () => {
     const isOneColumnGallery = ONE_COLUMN_GALLERIES.includes(galleryName);
 
     return (
-        <section ref={topElementRef} className={styles.gallery}>
-            <Link className={styles.navigateBackLink} to={`/${section}`}>
-                <FaArrowLeft />
-                <span>back to the list of galleries</span>
-            </Link>
-            {content.map((item) => {
-                const { id: contentId, videos, images } = item;
+        <>
+            <title>{`${sectionName} | ${galleryName} — Martina Facco`}</title>
+            <section ref={topElementRef} className={styles.gallery}>
+                <Link className={styles.navigateBackLink} to={`/${section}`}>
+                    <FaArrowLeft />
+                    <span>back to the list of galleries</span>
+                </Link>
+                {content.map((item) => {
+                    const { id: contentId, videos, images } = item;
 
-                const galleryDetails = { ...item, galleryName };
+                    const galleryDetails = { ...item, galleryName };
 
-                return (
-                    <article key={contentId}>
-                        <GalleryHeader galleryDetails={galleryDetails} />
-                        {galleryName === 'C.P. Company' && (
-                            <CpCompanyGallery
-                                images={images}
-                                galleryName={galleryName}
-                            />
-                        )}
-                        {galleryName === 'Conbipel' && (
-                            <ConbipelGallery
-                                images={images}
-                                galleryName={galleryName}
-                            />
-                        )}
-                        {galleryName === 'Colmar Originals' && (
-                            <ColmarOriginalsGallery
-                                images={images}
-                                galleryName={galleryName}
-                            />
-                        )}
-                        {images && isStandardGallery && (
-                            <div
-                                className={`${isOneColumnGallery ? styles.oneColumnImagesContainer : styles.allImagesContainer} ${contentId === 'kiko-content-3' ? styles.kikoAsianTouchContainer : ''}`}
-                            >
-                                {images?.map((image) => (
-                                    <GalleryImage
-                                        key={image.id}
-                                        fileName={image.fileName}
-                                        galleryName={galleryName}
-                                    />
-                                ))}
-                            </div>
-                        )}
-                        {videos && (
-                            <div
-                                className={`${styles.allVideosContainer} ${contentId === 'clinique-content-2' ? styles.cliniqueVideoContainer : ''}`}
-                            >
-                                {videos.map((video) => (
-                                    <GalleryVideo
-                                        key={video.id}
-                                        video={video}
-                                        videoPlaying={videoPlaying}
-                                        setVideoPlaying={setVideoPlaying}
-                                    />
-                                ))}
-                            </div>
-                        )}
-                    </article>
-                );
-            })}
-            <GalleryPagination
-                section={section}
-                galleries={galleries}
-                galleryId={galleryId}
-                ref={topElementRef}
-            />
-        </section>
+                    return (
+                        <article key={contentId}>
+                            <GalleryHeader galleryDetails={galleryDetails} />
+                            {galleryName === 'C.P. Company' && (
+                                <CpCompanyGallery
+                                    images={images}
+                                    galleryName={galleryName}
+                                />
+                            )}
+                            {galleryName === 'Conbipel' && (
+                                <ConbipelGallery
+                                    images={images}
+                                    galleryName={galleryName}
+                                />
+                            )}
+                            {galleryName === 'Colmar Originals' && (
+                                <ColmarOriginalsGallery
+                                    images={images}
+                                    galleryName={galleryName}
+                                />
+                            )}
+                            {images && isStandardGallery && (
+                                <div
+                                    className={`${isOneColumnGallery ? styles.oneColumnImagesContainer : styles.allImagesContainer} ${contentId === 'kiko-content-3' ? styles.kikoAsianTouchContainer : ''}`}
+                                >
+                                    {images?.map((image) => (
+                                        <GalleryImage
+                                            key={image.id}
+                                            fileName={image.fileName}
+                                            galleryName={galleryName}
+                                        />
+                                    ))}
+                                </div>
+                            )}
+                            {videos && (
+                                <div
+                                    className={`${styles.allVideosContainer} ${contentId === 'clinique-content-2' ? styles.cliniqueVideoContainer : ''}`}
+                                >
+                                    {videos.map((video) => (
+                                        <GalleryVideo
+                                            key={video.id}
+                                            video={video}
+                                            videoPlaying={videoPlaying}
+                                            setVideoPlaying={setVideoPlaying}
+                                        />
+                                    ))}
+                                </div>
+                            )}
+                        </article>
+                    );
+                })}
+                <GalleryPagination
+                    section={section}
+                    galleries={galleries}
+                    galleryId={galleryId}
+                    ref={topElementRef}
+                />
+            </section>
+        </>
     );
 };
 

@@ -1,5 +1,10 @@
 const Campaigns = () => {
-    return <div>Campaigns</div>;
+    return (
+        <>
+            <title>Campaigns &mdash; Martina Facco</title>
+            <div>Campaigns</div>
+        </>
+    );
 };
 
 export default Campaigns;
