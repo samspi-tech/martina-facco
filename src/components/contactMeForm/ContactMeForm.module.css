@@ -26,8 +26,9 @@
 
         & p {
             font-size: 1.4rem;
+            letter-spacing: -0.02em;
             text-transform: uppercase;
-            font-family: 'Iter', sans-serif;
+            font-family: 'Inter', sans-serif;
         }
     }
 

@@ -8,7 +8,7 @@ const ArtDirection = () => {
     const { galleries, isLoading, error } = useGalleries();
 
     if (isLoading) return <Spinner />;
-    if (error) return <ErrorMessage error="Failed to load galleries" />;
+    if (!error) return <ErrorMessage error="Failed to load galleries" />;
 
     return (
         <>

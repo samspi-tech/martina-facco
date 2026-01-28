@@ -4,7 +4,7 @@ const ContactMe = () => {
     return (
         <>
             <title>Contact me &mdash; Martina Facco</title>
-            <ContactMeForm />;
+            <ContactMeForm />
         </>
     );
 };

@@ -2,7 +2,7 @@ import { Toaster } from 'react-hot-toast';
 
 const Toast = () => {
     const options = {
-        duration: 5000000,
+        duration: 5000,
         success: {
             style: {
                 background: '#fff',
@@ -26,7 +26,7 @@ const Toast = () => {
             lineHeight: '1.4',
             borderRadius: '0',
             padding: '1.6rem 2rem',
-            fontFamily: 'Iter, sans-serif',
+            fontFamily: 'Inter, sans-serif',
         },
     };
 

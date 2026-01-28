@@ -14,6 +14,7 @@
         gap: 3rem;
 
         & p {
+            letter-spacing: -0.02em;
             font-family: 'Inter', sans-serif;
 
             display: flex;

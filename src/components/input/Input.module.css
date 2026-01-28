@@ -6,7 +6,8 @@
     &,
     & input,
     & textarea {
-        font-family: 'Iter', sans-serif;
+        letter-spacing: -0.03em;
+        font-family: 'Inter', sans-serif;
     }
 
     & textarea {
