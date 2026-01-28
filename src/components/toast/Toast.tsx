@@ -14,11 +14,11 @@ const Toast = () => {
         },
         error: {
             style: {
-                background: 'oklch(from red calc(l + 0.3) c h)',
+                background: 'var(--red)',
             },
             iconTheme: {
                 primary: '#000',
-                secondary: 'oklch(from red calc(l + 0.3) c h)',
+                secondary: 'var(--red)',
             },
         },
         style: {

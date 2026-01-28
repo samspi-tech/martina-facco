@@ -4,6 +4,6 @@
     margin-top: 0.2rem;
     padding: 0.2em 0.8em;
     letter-spacing: 0.02em;
+    background-color: var(--red);
     color: oklch(12.9% 0.042 264.695);
-    background-color: oklch(from red calc(l + 0.3) c h);
 }

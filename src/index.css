@@ -11,6 +11,7 @@
     --black: oklch(12.9% 0.042 264.695);
     --white: oklch(98.4% 0.003 247.858);
     --main: oklch(50% 0.134 242.749);
+    --red: oklch(from red calc(l + 0.3) c h);
 }
 
 html {
