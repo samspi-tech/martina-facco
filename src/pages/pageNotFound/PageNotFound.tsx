@@ -19,7 +19,9 @@ const PageNotFound = () => {
                         The page you were looking for could not be found
                     </span>
                 </h1>
-                <Button onClick={handleNavigateHome}>Home</Button>
+                <Button variant="secondary" onClick={handleNavigateHome}>
+                    Home
+                </Button>
             </div>
         </>
     );
