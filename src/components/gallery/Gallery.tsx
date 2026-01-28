@@ -12,23 +12,23 @@ import ConbipelGallery from '@/components/conbipelGallery/ConbipelGallery.tsx';
 import ColmarOriginalsGallery from '@/components/colmarOriginalsGallery/ColmarOriginalsGallery.tsx';
 import { FaArrowLeft } from 'react-icons/fa';
 import GalleryVideo from '@/components/gallery/partials/GalleryVideo.tsx';
+import Spinner from '@/components/spinner/Spinner.tsx';
+
+type GalleryParams = {
+    id: string;
+    section: Section;
+};
 
 const Gallery = () => {
-    const { galleries } = useGalleries();
     const topElementRef = useRef<HTMLElement>(null);
+    const { galleries, isLoading } = useGalleries();
+    const { section, id: galleryId } = useParams() as GalleryParams;
     const [videoPlaying, setVideoPlaying] = useState<string | null>('');
 
-    const { section, id: galleryId } = useParams<{
-        section: Section;
-        id: string;
-    }>();
-
-    if (!galleries || !section || !galleryId) return null;
+    if (isLoading || !galleries) return <Spinner />;
 
     const filteredGallery = galleries[section]
-        .filter(({ id }) => {
-            return id === galleryId;
-        })
+        .filter(({ id }) => id === galleryId)
         .at(0);
 
     const { galleryName, content } = filteredGallery!;
