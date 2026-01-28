@@ -1,7 +1,7 @@
 .errorMessage {
     font-weight: 600;
     width: fit-content;
-    margin-top: 0.5rem;
+    margin-top: 0.2rem;
     padding: 0.2em 0.8em;
     letter-spacing: 0.02em;
     color: oklch(12.9% 0.042 264.695);
