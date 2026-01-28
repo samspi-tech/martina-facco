@@ -43,3 +43,9 @@
     border: 0.1rem solid var(--black);
     font-family: 'Bodoni Moda', serif;
 }
+
+.secondary {
+    padding: 0;
+    color: #eee;
+    background-color: #222;
+}

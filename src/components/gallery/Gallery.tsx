@@ -14,6 +14,7 @@ import { FaArrowLeft } from 'react-icons/fa';
 import GalleryVideo from '@/components/gallery/partials/GalleryVideo.tsx';
 import Spinner from '@/components/spinner/Spinner.tsx';
 import { getSectionName } from '@/utils/helpers.ts';
+import ErrorMessage from '@/components/errorMessage/ErrorMessage.tsx';
 
 type GalleryParams = {
     id: string;
@@ -22,12 +23,13 @@ type GalleryParams = {
 
 const Gallery = () => {
     const topElementRef = useRef<HTMLElement>(null);
-    const { galleries, isLoading } = useGalleries();
+    const { galleries, isLoading, error } = useGalleries();
     const { section, id: galleryId } = useParams() as GalleryParams;
     const sectionName = getSectionName(section);
     const [videoPlaying, setVideoPlaying] = useState<string | null>('');
 
     if (isLoading || !galleries) return <Spinner />;
+    if (error) return <ErrorMessage error="Failed to load images" />;
 
     const filteredGallery = galleries[section]
         .filter(({ id }) => id === galleryId)

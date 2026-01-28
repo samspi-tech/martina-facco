@@ -2,7 +2,7 @@ import type { ComponentProps } from 'react';
 import styles from './Button.module.css';
 
 interface ButtonProps extends ComponentProps<'button'> {
-    variant?: 'primary' | 'outlinePrimary';
+    variant?: 'primary' | 'outlinePrimary' | 'secondary';
 }
 
 const Button = ({ variant = 'primary', ...props }: ButtonProps) => {
