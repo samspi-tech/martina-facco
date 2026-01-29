@@ -1,17 +1,14 @@
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
-import ReCAPTCHA from 'react-google-recaptcha';
 import styles from './ContactMeForm.module.css';
 import Input from '@/components/input/Input.tsx';
-import Button from '@/components/button/Button.tsx';
 import {
     contactMeSchema,
     type ContactMeTypes,
 } from '@/components/contactMeForm/contactMeSchema.ts';
-import { SITE_KEY } from '@/utils/constants.ts';
 import Textarea from '@/components/textarea/Textarea.tsx';
 import { useEmailJs } from '@/hooks/useEmailJs.ts';
-import MiniSpinner from '@/components/miniSpinner/MiniSpinner.tsx';
+import ContactMeFormFooter from '@/components/contactMeForm/partials/ContactMeFormFooter.tsx';
 
 const ContactMeForm = () => {
     const { register, formState, reset, handleSubmit } =
@@ -70,12 +67,10 @@ const ContactMeForm = () => {
                     {...register('message')}
                     error={errors.message?.message}
                 />
-                <footer>
-                    <ReCAPTCHA ref={recaptchaRef} sitekey={SITE_KEY} />
-                    <Button type="submit" value="Send" disabled={isSubmitting}>
-                        {isSubmitting ? <MiniSpinner /> : 'Send'}
-                    </Button>
-                </footer>
+                <ContactMeFormFooter
+                    ref={recaptchaRef}
+                    isSubmitting={isSubmitting}
+                />
             </form>
         </div>
     );
